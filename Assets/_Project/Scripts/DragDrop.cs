@@ -10,6 +10,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private CanvasGroup canvasGroup;
     private HorizontalLayoutGroup horizontalLayoutGroup;
 
+    private bool canBeDeleted = true;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -22,6 +24,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         horizontalLayoutGroup.enabled = false;
+        canBeDeleted = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -29,12 +32,18 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
+    public void OnDrop()
+    {
+        canBeDeleted = false;
+    }
+
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         horizontalLayoutGroup.enabled = true;
-        Destroy(gameObject);
+        if(canBeDeleted) Destroy(gameObject);
+        canBeDeleted = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
