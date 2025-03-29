@@ -5,19 +5,25 @@ using UnityEngine.UI;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler,
     IDropHandler
 {
-    [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private HorizontalLayoutGroup horizontalLayoutGroup;
     private PlayerVirtualHand playerVirtualHand;
 
-    [SerializeField] Card card;
+    private Canvas canvas;
+
+    [SerializeField] CardDataSO cardDataSO;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         horizontalLayoutGroup = GetComponentInParent<HorizontalLayoutGroup>();
+    }
+
+    public void SetupCanvas(Canvas theCanvas)
+    {
+        canvas = theCanvas;
     }
 
     private void Start()
@@ -31,7 +37,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.blocksRaycasts = false;
         horizontalLayoutGroup.enabled = false;
         CardSystemManager.Instance.IsDragging = true;
-        CardSystemManager.Instance.CurrentCard = card;
+        CardSystemManager.Instance.CurrentCardDataSO = cardDataSO;
     }
 
     public void OnDrag(PointerEventData eventData)

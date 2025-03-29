@@ -6,23 +6,22 @@ public class Tower : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject meleeAttack;
-    public float range;
-    public float attackDelay;
-    public float durability;
     public LayerMask mask;
     public GameObject healthCanvas;
 
     private HealthBar healthBar;
+    private float maxDurability;
     private float currentDurability;
     private TowerSlot slot;
-    private Card card;
+    private CardDataSO card;
     private Vector3 upOffset = new Vector3(0f, 0.5f, 0f);
 
     private void Start()
     {
         healthBar = GetComponent<HealthBar>();
-        card = CardSystemManager.Instance.CurrentCard;
-        currentDurability = durability;
+        card = CardSystemManager.Instance.CurrentCardDataSO;
+        maxDurability = card.durability;
+        currentDurability = maxDurability;
         healthCanvas.SetActive(true);
         StartCoroutine(AttackCoroutine());
     }
@@ -47,14 +46,14 @@ public class Tower : MonoBehaviour
             CreateAttack(enemy.transform.position);
             currentDurability -= 1f;
             currentDurability = currentDurability <= 0 ? 0 : currentDurability;
-            healthBar.UpdateHealthBar(durability, currentDurability);
+            healthBar.UpdateHealthBar(maxDurability, currentDurability);
             if(currentDurability == 0)
             {
                 Death();
                 yield break;
             }
         }
-        yield return new WaitForSeconds(attackDelay);
+        yield return new WaitForSeconds(card.attackSpeed);
         StartCoroutine(AttackCoroutine());
     }
 
@@ -75,7 +74,7 @@ public class Tower : MonoBehaviour
 
     public RaycastHit SphereCastEnemy()
     {
-        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, range, transform.up, range, mask);
+        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, card.range, transform.up, card.range, mask);
 
         if (raycastHits.Length > 0)
         {

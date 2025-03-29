@@ -9,7 +9,7 @@ public class PlayerVirtualHand : MonoBehaviour
 
     public bool CastTrigger()
     {
-        if(CardSystemManager.Instance.CurrentCard.cardType == CardType.Magic)
+        if(CardSystemManager.Instance.CurrentCardDataSO.cardType == CardType.Magic)
         {
             return ConsumeCardMagic();
         } else
@@ -20,13 +20,13 @@ public class PlayerVirtualHand : MonoBehaviour
     }
     public bool ConsumeCardMagic()
     {
-        Card card = CardSystemManager.Instance.CurrentCard;
-        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, 5f, transform.up, 5f, enemiesMask);
+        CardDataSO cardDataSO = CardSystemManager.Instance.CurrentCardDataSO;
+        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, cardDataSO.range, transform.up, cardDataSO.range, enemiesMask);
 
         foreach (var hit in raycastHits)
         {
             Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
-            enemy.ReceiveDamage(20f);
+            enemy.ReceiveDamage(cardDataSO.damage);
         }
 
         return true;
@@ -34,13 +34,14 @@ public class PlayerVirtualHand : MonoBehaviour
 
     public bool SetupTowerSlot()
     {
+        CardDataSO cardDataSO = CardSystemManager.Instance.CurrentCardDataSO;
         RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, 1f, transform.up, 1f, towerSlotMask);
 
         if (raycastHits.Length > 0)
         {
             var result = raycastHits.FirstOrDefault();
             TowerSlot towerSlot = result.collider.gameObject.GetComponent<TowerSlot>();
-            bool isSlotAvaliable = towerSlot.UseTowerObject();
+            bool isSlotAvaliable = towerSlot.UseTowerObject(cardDataSO);
             return isSlotAvaliable;
         }
 
