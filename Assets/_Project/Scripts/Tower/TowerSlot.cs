@@ -4,8 +4,15 @@ public class TowerSlot : MonoBehaviour
 {
     public GameObject towerObject;
 
-    public void UseTowerObject()
+    public bool UseTowerObject()
     {
-        towerObject.SetActive(true);
+        if(towerObject.activeSelf)
+        {
+            return false;
+        } else
+        {
+            towerObject.SetActive(true);
+            return true;
+        }
     }
 }

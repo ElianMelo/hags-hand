@@ -9,6 +9,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private HorizontalLayoutGroup horizontalLayoutGroup;
+    private PlayerVirtualHand playerVirtualHand;
 
     [Header("Card")]
     [SerializeField] Card card;
@@ -20,6 +21,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         horizontalLayoutGroup = GetComponentInParent<HorizontalLayoutGroup>();
+    }
+
+    private void Start()
+    {
+        playerVirtualHand = FindAnyObjectByType<PlayerVirtualHand>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -47,9 +53,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         horizontalLayoutGroup.enabled = true;
-        if(canBeDeleted) Destroy(gameObject);
         canBeDeleted = true;
         CardSystemManager.Instance.IsDragging = false;
+
+        bool cardConsumed = playerVirtualHand.CastTrigger();
+        if (cardConsumed) Destroy(gameObject);   
     }
 
     public void OnPointerDown(PointerEventData eventData)
