@@ -10,6 +10,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private CanvasGroup canvasGroup;
     private HorizontalLayoutGroup horizontalLayoutGroup;
 
+    [Header("Card")]
+    [SerializeField] Card card;
+
     private bool canBeDeleted = true;
 
     private void Awake()
@@ -25,6 +28,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.blocksRaycasts = false;
         horizontalLayoutGroup.enabled = false;
         canBeDeleted = true;
+        CardSystemManager.Instance.IsDragging = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -34,6 +38,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrop()
     {
+        CardSystemManager.Instance.CurrentCard = card;
         canBeDeleted = false;
     }
 
@@ -44,6 +49,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         horizontalLayoutGroup.enabled = true;
         if(canBeDeleted) Destroy(gameObject);
         canBeDeleted = true;
+        CardSystemManager.Instance.IsDragging = false;
     }
 
     public void OnPointerDown(PointerEventData eventData)
