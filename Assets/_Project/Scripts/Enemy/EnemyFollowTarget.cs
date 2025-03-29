@@ -16,6 +16,7 @@ public class EnemyFollowTarget : MonoBehaviour
     void Update()
     {
         agent.destination = target.transform.position;
+        agent.angularSpeed = 0f;
         agent.speed = speed;
     }
 }
