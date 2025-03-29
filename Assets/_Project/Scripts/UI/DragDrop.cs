@@ -11,10 +11,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private HorizontalLayoutGroup horizontalLayoutGroup;
     private PlayerVirtualHand playerVirtualHand;
 
-    [Header("Card")]
     [SerializeField] Card card;
-
-    private bool canBeDeleted = true;
 
     private void Awake()
     {
@@ -33,8 +30,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         horizontalLayoutGroup.enabled = false;
-        canBeDeleted = true;
         CardSystemManager.Instance.IsDragging = true;
+        CardSystemManager.Instance.CurrentCard = card;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -44,8 +41,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrop()
     {
-        CardSystemManager.Instance.CurrentCard = card;
-        canBeDeleted = false;
+        // Remove ? Add ? Check ?
+        // CardSystemManager.Instance.CurrentCard = card;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -53,7 +50,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         horizontalLayoutGroup.enabled = true;
-        canBeDeleted = true;
         CardSystemManager.Instance.IsDragging = false;
 
         bool cardConsumed = playerVirtualHand.CastTrigger();

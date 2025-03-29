@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
     public GameObject projectile;
+    public GameObject meleeAttack;
     public float range;
     public float attackDelay;
     public float durability;
@@ -14,13 +14,28 @@ public class Tower : MonoBehaviour
 
     private HealthBar healthBar;
     private float currentDurability;
+    private TowerSlot slot;
+    private Card card;
+    private Vector3 upOffset = new Vector3(0f, 0.5f, 0f);
 
     private void Start()
     {
         healthBar = GetComponent<HealthBar>();
+        card = CardSystemManager.Instance.CurrentCard;
         currentDurability = durability;
         healthCanvas.SetActive(true);
         StartCoroutine(AttackCoroutine());
+    }
+
+    public void SetupTowerSlot(TowerSlot towerSlot)
+    {
+        slot = towerSlot;
+    }
+
+    private void Death()
+    {
+        slot.FreeTower();
+        Destroy(gameObject);
     }
 
     private IEnumerator AttackCoroutine()
@@ -29,19 +44,33 @@ public class Tower : MonoBehaviour
         Enemy enemy = hit.collider?.gameObject?.GetComponent<Enemy>();
         if (enemy != null)
         {
-            Vector3 direction = enemy.transform.position - transform.position;
-            GameObject instance = Instantiate(projectile, transform.position, Quaternion.identity);
-            instance.transform.forward = direction;
+            CreateAttack(enemy.transform.position);
             currentDurability -= 1f;
             currentDurability = currentDurability <= 0 ? 0 : currentDurability;
             healthBar.UpdateHealthBar(durability, currentDurability);
             if(currentDurability == 0)
             {
+                Death();
                 yield break;
             }
         }
         yield return new WaitForSeconds(attackDelay);
         StartCoroutine(AttackCoroutine());
+    }
+
+    private void CreateAttack(Vector3 enemyPosition)
+    {
+        if(card.cardType == CardType.Ranged)
+        {
+            Vector3 direction = enemyPosition - transform.position;
+            GameObject instance = Instantiate(projectile, transform.position + upOffset, Quaternion.identity);
+            instance.transform.forward = direction;
+            Projectile currentProjectile = instance.GetComponent<Projectile>();
+            currentProjectile.AddForce();
+        } else
+        {
+            Instantiate(meleeAttack, enemyPosition + upOffset, Quaternion.identity);
+        }
     }
 
     public RaycastHit SphereCastEnemy()

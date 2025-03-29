@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody body;
     public float force;
 
-    void Start()
+    public void AddForce()
     {
         body.AddForce(transform.forward * force, ForceMode.Impulse);
     }

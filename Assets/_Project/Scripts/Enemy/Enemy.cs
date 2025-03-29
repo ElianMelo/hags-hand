@@ -20,9 +20,14 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
-            currentHealth -= 1;
-            healthBar.UpdateHealthBar(maxHealth, currentHealth);
-            Destroy(other.gameObject);
+            ReceiveDamage(1);
+            Destroy(other.gameObject, 0.5f);
         }
+    }
+
+    public void ReceiveDamage(float damageAmount)
+    {
+        currentHealth -= damageAmount;
+        healthBar.UpdateHealthBar(maxHealth, currentHealth);
     }
 }

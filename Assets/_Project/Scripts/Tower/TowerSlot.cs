@@ -2,17 +2,27 @@ using UnityEngine;
 
 public class TowerSlot : MonoBehaviour
 {
-    public GameObject towerObject;
+    public GameObject towerPrefab;
+
+    private GameObject towerInstance;
+
+    public void FreeTower()
+    {
+        towerInstance = null;
+    }
 
     public bool UseTowerObject()
     {
-        if(towerObject.activeSelf)
+        if(towerInstance == null)
         {
-            return false;
+            towerInstance = Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            Tower tower = towerInstance.GetComponent<Tower>();
+            tower.transform.parent = transform;
+            tower.SetupTowerSlot(this);
+            return true;
         } else
         {
-            towerObject.SetActive(true);
-            return true;
+            return false;
         }
     }
 }
