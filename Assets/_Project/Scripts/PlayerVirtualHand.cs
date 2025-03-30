@@ -27,6 +27,7 @@ public class PlayerVirtualHand : MonoBehaviour
         {
             Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
             enemy.ReceiveDamage(cardDataSO.damage);
+            enemy.ReceiveSpecialEffect(cardDataSO.specialEffect);
         }
 
         return true;

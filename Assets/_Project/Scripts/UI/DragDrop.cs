@@ -11,6 +11,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private PlayerVirtualHand playerVirtualHand;
     private CardObject cardObject;
 
+    private bool backToHand = false;
+
     private Canvas canvas;
 
     private void Awake()
@@ -36,6 +38,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         horizontalLayoutGroup.enabled = false;
+        backToHand = false;
         CardSystemManager.Instance.IsDragging = true;
         CardSystemManager.Instance.CurrentCardDataSO = cardObject.CardDataHolderSO;
     }
@@ -47,8 +50,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrop()
     {
-        // Remove ? Add ? Check ?
-        // CardSystemManager.Instance.CurrentCard = card;
+        backToHand = true;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -57,6 +59,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.blocksRaycasts = true;
         horizontalLayoutGroup.enabled = true;
         CardSystemManager.Instance.IsDragging = false;
+
+        if (backToHand)
+        {
+            backToHand = false;
+            return;
+        }
 
         bool cardConsumed = playerVirtualHand.CastTrigger();
         if (cardConsumed) Destroy(gameObject);   

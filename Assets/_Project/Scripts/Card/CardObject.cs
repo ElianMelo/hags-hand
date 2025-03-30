@@ -17,11 +17,16 @@ public class CardObject : MonoBehaviour
     public Image backgroundImage;
     public Image frontImage;
     public TMP_Text cardName;
+    public GameObject magicOverlay;
 
     public void SetupCardData()
     {
         cardName.text = CardDataHolderSO.creatureName;
         backgroundImage.sprite = CardSystemManager.Instance.RarityToSprite(CardDataHolderSO.rarity);
         frontImage.sprite = CardDataHolderSO.cardSprite;
+        if(CardDataHolderSO.cardType == CardType.Magic)
+        {
+            magicOverlay.SetActive(true);
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CardDataSO", menuName = "ScriptableObjects/CardDataSO", order = 1)]
@@ -8,6 +7,9 @@ public class CardDataSO : ScriptableObject
     public Sprite cardSprite;
     public CardType cardType;
     public Rarity rarity;
+    public SpecialEffect specialEffect;
+    public float specialEffectMultiplier;
+    public float specialEffectDuration;
     public float range;
     public float attackSpeed;
     public float damage;
@@ -29,4 +31,10 @@ public enum Rarity
     Rare,
     Epic,
     Legendary
+}
+
+public enum SpecialEffect
+{
+    None,
+    Fear
 }

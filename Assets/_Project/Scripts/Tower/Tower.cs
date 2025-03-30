@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
     public GameObject meleeAttack;
     public LayerMask mask;
     public GameObject healthCanvas;
+    public Animator animator;
 
     private HealthBar healthBar;
     private float maxDurability;
@@ -16,9 +17,12 @@ public class Tower : MonoBehaviour
     private CardDataSO card;
     private Vector3 upOffset = new Vector3(0f, 0.5f, 0f);
 
+    private const string AttackAnim = "Attack";
+
     private void Start()
     {
         healthBar = GetComponent<HealthBar>();
+        animator = GetComponentInChildren<Animator>();
         card = CardSystemManager.Instance.CurrentCardDataSO;
         maxDurability = card.durability;
         currentDurability = maxDurability;
@@ -59,7 +63,8 @@ public class Tower : MonoBehaviour
 
     private void CreateAttack(Vector3 enemyPosition)
     {
-        if(card.cardType == CardType.Ranged)
+        animator.SetTrigger(AttackAnim);
+        if (card.cardType == CardType.Ranged)
         {
             Vector3 direction = enemyPosition - transform.position;
             GameObject instance = Instantiate(projectile, transform.position + upOffset, Quaternion.identity);

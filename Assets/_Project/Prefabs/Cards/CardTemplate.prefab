@@ -240,6 +240,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 5707012042041117512}
   frontImage: {fileID: 4661087870239124356}
   cardName: {fileID: 5715128465526822210}
+  magicOverlay: {fileID: 8922755243120411319}
 --- !u!1 &8231570865078371785
 GameObject:
   m_ObjectHideFlags: 0

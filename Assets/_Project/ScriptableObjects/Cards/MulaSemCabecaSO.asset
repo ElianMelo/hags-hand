@@ -16,6 +16,9 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 0938ab80825174c45950f8e60cb9b76c, type: 3}
   cardType: 2
   rarity: 2
+  specialEffect: 1
+  specialEffectMultiplier: 0
+  specialEffectDuration: 2
   range: 2
   attackSpeed: 1
   damage: 10
