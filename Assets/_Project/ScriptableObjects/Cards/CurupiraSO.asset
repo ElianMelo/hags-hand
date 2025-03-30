@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CurupiraSO
   m_EditorClassIdentifier: 
   creatureName: Curupira
-  cardSprite: {fileID: 21300000, guid: 6ea200684e1cf964a8be26a7bcff1964, type: 3}
+  cardSprite: {fileID: 21300000, guid: a3dc736ace753274fac62ff16a8ab32d, type: 3}
   cardType: 1
   rarity: 0
   range: 2

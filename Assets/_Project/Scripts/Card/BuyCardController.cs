@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class BuyCardController : MonoBehaviour
 {
-    public List<GameObject> cardsPrefabs = new();
+    public GameObject cardTemplate;
+    public List<CardDataSO> cards = new();
     public GameObject listCardsGroup;
     public Button button;
     public Canvas canvas;
@@ -22,8 +23,10 @@ public class BuyCardController : MonoBehaviour
 
     private void OnButtonClick()
     {
-        GameObject instance = Instantiate(cardsPrefabs[Random.Range(0, cardsPrefabs.Count)], listCardsGroup.transform);
+        CardDataSO selectedCard = cards[Random.Range(0, cards.Count)];
+        GameObject instance = Instantiate(cardTemplate, listCardsGroup.transform);
         instance.transform.SetParent(listCardsGroup.transform);
         instance.GetComponent<DragDrop>().SetupCanvas(canvas);
+        instance.GetComponent<CardObject>().CardDataHolderSO = selectedCard;
     }
 }

@@ -37,7 +37,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.blocksRaycasts = false;
         horizontalLayoutGroup.enabled = false;
         CardSystemManager.Instance.IsDragging = true;
-        CardSystemManager.Instance.CurrentCardDataSO = cardObject.cardDataHolderSO;
+        CardSystemManager.Instance.CurrentCardDataSO = cardObject.CardDataHolderSO;
     }
 
     public void OnDrag(PointerEventData eventData)

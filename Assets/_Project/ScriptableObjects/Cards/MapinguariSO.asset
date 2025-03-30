@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
   m_Name: MapinguariSO
   m_EditorClassIdentifier: 
-  creatureName: Curupira
-  cardSprite: {fileID: 21300000, guid: 6ea200684e1cf964a8be26a7bcff1964, type: 3}
+  creatureName: Mapinguari
+  cardSprite: {fileID: 21300000, guid: 87a9423453baf0645adff6b7d9e02b2c, type: 3}
   cardType: 0
-  rarity: 0
+  rarity: 1
   range: 2
   attackSpeed: 1
   damage: 2
