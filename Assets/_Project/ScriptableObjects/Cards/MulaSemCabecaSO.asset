@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
-  m_Name: MapinguariSO
+  m_Name: MulaSemCabecaSO
   m_EditorClassIdentifier: 
   creatureName: Curupira
-  cardSprite: {fileID: 0}
-  cardType: 0
+  cardSprite: {fileID: 21300000, guid: 6ea200684e1cf964a8be26a7bcff1964, type: 3}
+  cardType: 2
   rarity: 0
   range: 2
   attackSpeed: 1
-  damage: 2
+  damage: 10
   durability: 10
   towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}

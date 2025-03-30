@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardDataSO : ScriptableObject
 {
     public string creatureName;
-    public SpriteRenderer cardSprite;
+    public Sprite cardSprite;
     public CardType cardType;
     public Rarity rarity;
     public float range;
