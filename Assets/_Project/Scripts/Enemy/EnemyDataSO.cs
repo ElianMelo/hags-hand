@@ -1,0 +1,11 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "EnemyDataSO", menuName = "ScriptableObjects/EnemyDataSO", order = 1)]
+public class EnemyDataSO : ScriptableObject
+{
+    public string enemyName;
+    public SpecialEffect specialEffectResistance;
+    public float speed;
+    public float health;
+    public Enemy enemyPrefab;
+}

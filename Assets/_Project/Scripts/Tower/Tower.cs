@@ -70,10 +70,13 @@ public class Tower : MonoBehaviour
             GameObject instance = Instantiate(projectile, transform.position + upOffset, Quaternion.identity);
             instance.transform.forward = direction;
             Projectile currentProjectile = instance.GetComponent<Projectile>();
+            currentProjectile.SetDamage(card.damage);
             currentProjectile.AddForce();
         } else
         {
-            Instantiate(meleeAttack, enemyPosition + upOffset, Quaternion.identity);
+            GameObject instance = Instantiate(meleeAttack, enemyPosition + upOffset, Quaternion.identity);
+            Projectile currentProjectile = instance.GetComponent<Projectile>();
+            currentProjectile.SetDamage(card.damage);
         }
     }
 

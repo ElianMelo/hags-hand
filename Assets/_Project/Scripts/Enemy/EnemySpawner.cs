@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public EnemySpawnerDataSO enemySpawnerDataSO;
     public Transform enemyTarget;
-    public float spawnRate;
+
+    private int currentWave = 0;
 
     void Start()
     {
@@ -14,9 +15,29 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
     {
-        GameObject instance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        instance.GetComponent<EnemyFollowTarget>().SetupTargets(enemyTarget, transform);
-        yield return new WaitForSeconds(spawnRate);
+        if (currentWave >= enemySpawnerDataSO.waves.Count) yield break;
+        int waveAmount = enemySpawnerDataSO.waves[currentWave].waveDatas.Count;
+        int waveCount;
+
+        for (int i = 0; i < waveAmount; i++)
+        {
+            waveCount = i;
+            EnemyDataSO currentEnemyData = enemySpawnerDataSO.waves[currentWave].waveDatas[waveCount].enemyData;
+
+            int waveEnemyAmount = enemySpawnerDataSO.waves[currentWave].waveDatas[waveCount].amount;
+
+            for (int j = 0; j < waveEnemyAmount; j++)
+            {
+                GameObject instance = Instantiate(currentEnemyData.enemyPrefab.gameObject, transform.position, Quaternion.identity);
+                instance.GetComponent<EnemyFollowTarget>().SetupTargets(enemyTarget, transform);
+                yield return new WaitForSeconds(enemySpawnerDataSO.waves[currentWave].spawnRate);
+            }
+        }
+
+        yield return new WaitForSeconds(enemySpawnerDataSO.delayBetweenWaves);
+
+        currentWave++;
+
         StartCoroutine(SpawnEnemies());
     }
 }

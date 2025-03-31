@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     private HealthBar healthBar;
     private EnemyFollowTarget enemyFollowTarget;
     private Animator animator;
-    private bool isDead;
+    private bool isDead = false;
 
     private const string DeathAnim = "Death";
 
@@ -30,13 +30,15 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
-            ReceiveDamage(1);
+            var damage = other.GetComponent<Projectile>().GetDamage();
+            ReceiveDamage(damage);
             Destroy(other.gameObject, 0.5f);
         }
     }
 
     public void ReceiveDamage(float damageAmount)
     {
+        if (isDead) return;
         currentHealth -= damageAmount;
         if(currentHealth <= 0)
         {
@@ -51,6 +53,7 @@ public class Enemy : MonoBehaviour
 
     public void ReceiveSpecialEffect(SpecialEffect specialEffect)
     {
+        if (isDead) return;
         switch (specialEffect)
         {
             case SpecialEffect.None: return;

@@ -2063,9 +2063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb1788a147710449a10f34b22ad7ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4047701020844138359, guid: bc9ba7fd6cd049747ab9a38df4c0cf0d, type: 3}
+  enemySpawnerDataSO: {fileID: 11400000, guid: 9a50a12d20a458c44bbb3754d2fbd31c, type: 2}
   enemyTarget: {fileID: 1138207509}
-  spawnRate: 1
 --- !u!1 &1615523715
 GameObject:
   m_ObjectHideFlags: 0
