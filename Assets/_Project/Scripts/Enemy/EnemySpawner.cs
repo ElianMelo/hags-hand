@@ -1,16 +1,22 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject enemyPrefab;
+    public Transform enemyTarget;
+    public float spawnRate;
+
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemies());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator SpawnEnemies()
     {
-        
+        GameObject instance = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        instance.GetComponent<EnemyFollowTarget>().SetupTargets(enemyTarget, transform);
+        yield return new WaitForSeconds(spawnRate);
+        StartCoroutine(SpawnEnemies());
     }
 }
