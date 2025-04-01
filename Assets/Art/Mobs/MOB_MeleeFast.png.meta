@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a42b3459a07b60c4d8dd0dfcd27a78e2
+guid: 5ad5993210101ec468be9dbc82312686
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FX_TurretPlacement_0
+      name: MOB_MeleeFast_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5472e4333338e4d8889d01b2621bcc
-      internalID: 671386752
+      spriteID: 32ff990d6299278488198f8e667900bf
+      internalID: -1530652345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_1
+      name: MOB_MeleeFast_1
       rect:
         serializedVersion: 2
-        x: 229
+        x: 92
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6668ad6138208b45a148ecbd00e1b8c
-      internalID: -1938814773
+      spriteID: 7ec01f2f14b9dee45846b21a991a350a
+      internalID: -470816686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_2
+      name: MOB_MeleeFast_2
       rect:
         serializedVersion: 2
-        x: 458
+        x: 184
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042d84b2443b75f438265b98432d06f5
-      internalID: 1401308159
+      spriteID: 8a5b73f737d4b3b46b0e88a126224dda
+      internalID: 404098839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_3
+      name: MOB_MeleeFast_3
       rect:
         serializedVersion: 2
-        x: 687
+        x: 276
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4922628285da9a42bca963fe2e56a22
-      internalID: -1981591503
+      spriteID: 689a7fcf2402deb4a91c31e846bdea84
+      internalID: 639152298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_4
+      name: MOB_MeleeFast_4
       rect:
         serializedVersion: 2
-        x: 916
+        x: 368
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c4f427089c7f854db9f94d183cfc758
-      internalID: -1791734962
+      spriteID: 26f27fc86b91636469e665112e6d9004
+      internalID: 845810208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_5
+      name: MOB_MeleeFast_5
       rect:
         serializedVersion: 2
-        x: 1145
+        x: 460
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1465b8506e73484495eeeec726c243c
-      internalID: 1560413242
+      spriteID: 8f19f4b330c3f7240bdb80096964dce5
+      internalID: 1887736885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_6
+      name: MOB_MeleeFast_6
       rect:
         serializedVersion: 2
-        x: 1374
+        x: 552
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 028b4e99bf95b7d46af946228f45662a
-      internalID: 567405597
+      spriteID: f68fc55a6d08c274db12cb6cbbbae803
+      internalID: 1629339751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_7
+      name: MOB_MeleeFast_7
       rect:
         serializedVersion: 2
-        x: 1603
+        x: 644
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ebe938ffbd13d44a4ccf789bb03719
-      internalID: 1995367858
+      spriteID: b410493ade1f81e44835dc36e729f072
+      internalID: -1225347880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_8
+      name: MOB_MeleeFast_8
       rect:
         serializedVersion: 2
-        x: 1832
+        x: 736
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +301,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d287a2abdbde7154383eb3ffc7a41c77
-      internalID: -1782344249
+      spriteID: b98631466a2e4d84180d1506c9ebeca3
+      internalID: 1019071688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_9
+      name: MOB_MeleeFast_9
       rect:
         serializedVersion: 2
-        x: 2061
+        x: 828
         y: 0
-        width: 229
-        height: 206
+        width: 92
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,8 +323,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f87c728965aae9e4cb9a02ffda957e3a
-      internalID: -670777884
+      spriteID: 37654032afc3dc54f98ba49949291c19
+      internalID: 1149692234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOB_MeleeFast_10
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 92
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a72222c187df6489d953c224a066b1
+      internalID: -792010373
       vertices: []
       indices: 
       edges: []
@@ -333,7 +355,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 817c79443def79f4a8d322ae6891beda
+    spriteID: c627f89443e0b7046ac56fafdc82b990
     internalID: 0
     vertices: []
     indices: 
@@ -343,16 +365,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FX_TurretPlacement_0: 671386752
-      FX_TurretPlacement_1: -1938814773
-      FX_TurretPlacement_2: 1401308159
-      FX_TurretPlacement_3: -1981591503
-      FX_TurretPlacement_4: -1791734962
-      FX_TurretPlacement_5: 1560413242
-      FX_TurretPlacement_6: 567405597
-      FX_TurretPlacement_7: 1995367858
-      FX_TurretPlacement_8: -1782344249
-      FX_TurretPlacement_9: -670777884
+      MOB_MeleeFast_0: -1530652345
+      MOB_MeleeFast_1: -470816686
+      MOB_MeleeFast_10: -792010373
+      MOB_MeleeFast_2: 404098839
+      MOB_MeleeFast_3: 639152298
+      MOB_MeleeFast_4: 845810208
+      MOB_MeleeFast_5: 1887736885
+      MOB_MeleeFast_6: 1629339751
+      MOB_MeleeFast_7: -1225347880
+      MOB_MeleeFast_8: 1019071688
+      MOB_MeleeFast_9: 1149692234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

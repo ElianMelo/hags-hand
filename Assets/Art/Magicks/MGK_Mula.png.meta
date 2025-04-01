@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a42b3459a07b60c4d8dd0dfcd27a78e2
+guid: 31ca581ea84883c458f1f55ae38dc042
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FX_TurretPlacement_0
+      name: MGK_Mula_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 229
-        height: 206
+        width: 181
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5472e4333338e4d8889d01b2621bcc
-      internalID: 671386752
+      spriteID: f31ac51aa752b6d47b492010f61a0e24
+      internalID: 954625141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_1
+      name: MGK_Mula_1
       rect:
         serializedVersion: 2
-        x: 229
+        x: 181
         y: 0
-        width: 229
-        height: 206
+        width: 181
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6668ad6138208b45a148ecbd00e1b8c
-      internalID: -1938814773
+      spriteID: 73ce953f58583094f852dde7d96c279d
+      internalID: 1522906808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_2
+      name: MGK_Mula_2
       rect:
         serializedVersion: 2
-        x: 458
+        x: 362
         y: 0
-        width: 229
-        height: 206
+        width: 181
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042d84b2443b75f438265b98432d06f5
-      internalID: 1401308159
+      spriteID: 88f6ce5351d64b044966febbccc746c6
+      internalID: -501328091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_3
+      name: MGK_Mula_3
       rect:
         serializedVersion: 2
-        x: 687
+        x: 543
         y: 0
-        width: 229
-        height: 206
+        width: 181
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4922628285da9a42bca963fe2e56a22
-      internalID: -1981591503
+      spriteID: 987361fd6663cc04484371d328ae539d
+      internalID: 1197780053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_4
+      name: MGK_Mula_4
       rect:
         serializedVersion: 2
-        x: 916
+        x: 724
         y: 0
-        width: 229
-        height: 206
+        width: 181
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c4f427089c7f854db9f94d183cfc758
-      internalID: -1791734962
+      spriteID: d09900ac4d44a8f499b32626fb6b787e
+      internalID: -1657328257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FX_TurretPlacement_5
+      name: MGK_Mula_5
       rect:
         serializedVersion: 2
-        x: 1145
+        x: 905
         y: 0
-        width: 229
-        height: 206
+        width: 181
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,96 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1465b8506e73484495eeeec726c243c
-      internalID: 1560413242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FX_TurretPlacement_6
-      rect:
-        serializedVersion: 2
-        x: 1374
-        y: 0
-        width: 229
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 028b4e99bf95b7d46af946228f45662a
-      internalID: 567405597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FX_TurretPlacement_7
-      rect:
-        serializedVersion: 2
-        x: 1603
-        y: 0
-        width: 229
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02ebe938ffbd13d44a4ccf789bb03719
-      internalID: 1995367858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FX_TurretPlacement_8
-      rect:
-        serializedVersion: 2
-        x: 1832
-        y: 0
-        width: 229
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d287a2abdbde7154383eb3ffc7a41c77
-      internalID: -1782344249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FX_TurretPlacement_9
-      rect:
-        serializedVersion: 2
-        x: 2061
-        y: 0
-        width: 229
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f87c728965aae9e4cb9a02ffda957e3a
-      internalID: -670777884
+      spriteID: 73eadac6334a60d43932fb2a7477d0a1
+      internalID: -628364600
       vertices: []
       indices: 
       edges: []
@@ -333,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 817c79443def79f4a8d322ae6891beda
+    spriteID: 39044892bb169d24a9bd1da6408e02f3
     internalID: 0
     vertices: []
     indices: 
@@ -343,16 +255,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FX_TurretPlacement_0: 671386752
-      FX_TurretPlacement_1: -1938814773
-      FX_TurretPlacement_2: 1401308159
-      FX_TurretPlacement_3: -1981591503
-      FX_TurretPlacement_4: -1791734962
-      FX_TurretPlacement_5: 1560413242
-      FX_TurretPlacement_6: 567405597
-      FX_TurretPlacement_7: 1995367858
-      FX_TurretPlacement_8: -1782344249
-      FX_TurretPlacement_9: -670777884
+      MGK_Mula_0: 954625141
+      MGK_Mula_1: 1522906808
+      MGK_Mula_2: -501328091
+      MGK_Mula_3: 1197780053
+      MGK_Mula_4: -1657328257
+      MGK_Mula_5: -628364600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
