@@ -8,5 +8,6 @@ public class EnemyDataSO : ScriptableObject
     public float speed;
     public float health;
     public int coinReward;
+    public int experience;
     public Enemy enemyPrefab;
 }

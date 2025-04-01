@@ -15,6 +15,7 @@ public class StoreCornerController : MonoBehaviour
 
     private const int CARDPRIZE = 5;
     private const int EXPPRIZE = 5;
+    private const int EXPVALUE = 5;
     private int coin = 0;
 
     void Start()
@@ -81,7 +82,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void BuyExp()
     {
-        // Experience Manager
+        InterfaceSystemManager.Instance.AddExperience(EXPVALUE);
     }
 
     private void OnBuyCardButtonClick()

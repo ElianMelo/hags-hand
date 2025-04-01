@@ -33,9 +33,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyFollowTarget.SetupTargets(enemyTarget, transform);
                 enemyFollowTarget.SetupSpeed(currentEnemyData.speed);
                 Enemy enemy = instance.GetComponent<Enemy>();
-                enemy.SetupResistance(currentEnemyData.specialEffectResistance);
-                enemy.SetupHealth(currentEnemyData.health);
-                enemy.SetupCoinAmount(currentEnemyData.coinReward);
+                enemy.SetupEnemyDataSO(currentEnemyData);
                 yield return new WaitForSeconds(enemySpawnerDataSO.waves[currentWave].spawnRate);
             }
         }

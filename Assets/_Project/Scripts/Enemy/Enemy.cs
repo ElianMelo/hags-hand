@@ -5,12 +5,12 @@ public class Enemy : MonoBehaviour
 {
     private float maxHealth;
     private float currentHealth;
-    private int coinAmount;
     private HealthBar healthBar;
     private EnemyFollowTarget enemyFollowTarget;
     private Animator animator;
     private bool isDead = false;
-    private SpecialEffect resistance;
+    private EnemyDataSO enemyDataSO;
+
 
     private const string DeathAnim = "Death";
 
@@ -23,20 +23,12 @@ public class Enemy : MonoBehaviour
         enemyFollowTarget = GetComponent<EnemyFollowTarget>();
     }
 
-    public void SetupResistance(SpecialEffect resistance)
+    public void SetupEnemyDataSO(EnemyDataSO enemyDataSO)
     {
-        this.resistance = resistance;
-    }
+        this.enemyDataSO = enemyDataSO;
 
-    public void SetupHealth(float health)
-    {
-        currentHealth = health;
+        maxHealth = enemyDataSO.health;
         currentHealth = maxHealth;
-    }
-
-    public void SetupCoinAmount(int amount)
-    {
-        coinAmount = amount;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -59,7 +51,8 @@ public class Enemy : MonoBehaviour
             currentHealth = 0;
             animator.SetTrigger(DeathAnim);
             enemyFollowTarget.StopFollowing();
-            InterfaceSystemManager.Instance.AddCoin(coinAmount);
+            InterfaceSystemManager.Instance.AddCoin(enemyDataSO.coinReward);
+            InterfaceSystemManager.Instance.AddExperience(enemyDataSO.experience);
             Destroy(gameObject, 1f);
         }
         healthBar.UpdateHealthBar(maxHealth, currentHealth);
@@ -78,7 +71,7 @@ public class Enemy : MonoBehaviour
 
     public void ReceiveFear()
     {
-        if (resistance == SpecialEffect.Fear) return;
+        if (enemyDataSO.specialEffectResistance == SpecialEffect.Fear) return;
         if (fearCoroutine != null) StopCoroutine(fearCoroutine);
         fearCoroutine = StartCoroutine(ReceiveFearCoroutine());
     }
