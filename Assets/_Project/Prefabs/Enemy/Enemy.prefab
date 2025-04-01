@@ -223,8 +223,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21743011, y: 1, z: 0.5634646}
+  m_Center: {x: -0.023956299, y: 0, z: 0.005323559}
 --- !u!195 &6692374556069421130
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4047701020844138359}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.19
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946aecef140d3c344a43b22ae182c352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!114 &3210896807166030665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06398a26a2bf9941af55cbb3bb9cd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
 --- !u!114 &7416548999587121938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574681324925911681, guid: fcdb432300537244cb9067bb6d110094, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.72
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 2574681324925911681, guid: fcdb432300537244cb9067bb6d110094, type: 3}
       propertyPath: m_LocalRotation.w
@@ -383,11 +381,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574681324925911681, guid: fcdb432300537244cb9067bb6d110094, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2574681324925911681, guid: fcdb432300537244cb9067bb6d110094, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.12599993
+      value: 0.126
       objectReference: {fileID: 0}
     - target: {fileID: 2574681324925911681, guid: fcdb432300537244cb9067bb6d110094, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
