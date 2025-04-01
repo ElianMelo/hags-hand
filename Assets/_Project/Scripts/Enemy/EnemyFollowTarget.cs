@@ -3,8 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyFollowTarget : MonoBehaviour
 {
-    // todo: scriptable
-    public float speed;
+    private float speed;
 
     private NavMeshAgent agent;
     private Transform currentTarget;
@@ -15,6 +14,11 @@ public class EnemyFollowTarget : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    public void SetupSpeed(float speed)
+    {
+        this.speed = speed;
     }
 
     public void SetupTargets(Transform target, Transform spawn)

@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float maxHealth;
+    private float maxHealth;
     private float currentHealth;
+    private int coinAmount;
     private HealthBar healthBar;
     private EnemyFollowTarget enemyFollowTarget;
     private Animator animator;
     private bool isDead = false;
+    private SpecialEffect resistance;
 
     private const string DeathAnim = "Death";
 
@@ -21,9 +23,20 @@ public class Enemy : MonoBehaviour
         enemyFollowTarget = GetComponent<EnemyFollowTarget>();
     }
 
-    private void Start()
+    public void SetupResistance(SpecialEffect resistance)
     {
+        this.resistance = resistance;
+    }
+
+    public void SetupHealth(float health)
+    {
+        currentHealth = health;
         currentHealth = maxHealth;
+    }
+
+    public void SetupCoinAmount(int amount)
+    {
+        coinAmount = amount;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,6 +59,7 @@ public class Enemy : MonoBehaviour
             currentHealth = 0;
             animator.SetTrigger(DeathAnim);
             enemyFollowTarget.StopFollowing();
+            InterfaceSystemManager.Instance.AddCoin(coinAmount);
             Destroy(gameObject, 1f);
         }
         healthBar.UpdateHealthBar(maxHealth, currentHealth);
@@ -64,6 +78,7 @@ public class Enemy : MonoBehaviour
 
     public void ReceiveFear()
     {
+        if (resistance == SpecialEffect.Fear) return;
         if (fearCoroutine != null) StopCoroutine(fearCoroutine);
         fearCoroutine = StartCoroutine(ReceiveFearCoroutine());
     }

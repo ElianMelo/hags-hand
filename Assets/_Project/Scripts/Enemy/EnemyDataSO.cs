@@ -7,5 +7,6 @@ public class EnemyDataSO : ScriptableObject
     public SpecialEffect specialEffectResistance;
     public float speed;
     public float health;
+    public int coinReward;
     public Enemy enemyPrefab;
 }

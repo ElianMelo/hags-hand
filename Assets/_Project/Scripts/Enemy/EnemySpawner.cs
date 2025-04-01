@@ -29,7 +29,13 @@ public class EnemySpawner : MonoBehaviour
             for (int j = 0; j < waveEnemyAmount; j++)
             {
                 GameObject instance = Instantiate(currentEnemyData.enemyPrefab.gameObject, transform.position, Quaternion.identity);
-                instance.GetComponent<EnemyFollowTarget>().SetupTargets(enemyTarget, transform);
+                EnemyFollowTarget enemyFollowTarget = instance.GetComponent<EnemyFollowTarget>();
+                enemyFollowTarget.SetupTargets(enemyTarget, transform);
+                enemyFollowTarget.SetupSpeed(currentEnemyData.speed);
+                Enemy enemy = instance.GetComponent<Enemy>();
+                enemy.SetupResistance(currentEnemyData.specialEffectResistance);
+                enemy.SetupHealth(currentEnemyData.health);
+                enemy.SetupCoinAmount(currentEnemyData.coinReward);
                 yield return new WaitForSeconds(enemySpawnerDataSO.waves[currentWave].spawnRate);
             }
         }
