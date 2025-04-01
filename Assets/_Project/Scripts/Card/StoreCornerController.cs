@@ -64,6 +64,8 @@ public class StoreCornerController : MonoBehaviour
 
     private void BuyCard()
     {
+        Rarity rarity = InterfaceSystemManager.Instance.GetCardRarity();
+
         CardDataSO selectedCard = cards[Random.Range(0, cards.Count)];
         GameObject instance = Instantiate(cardTemplate, listCardsGroup.transform);
         instance.transform.SetParent(listCardsGroup.transform);

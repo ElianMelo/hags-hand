@@ -24,4 +24,9 @@ public class InterfaceSystemManager : MonoBehaviour
         cucaCornerController.AddExperience(amount);
     }
 
+    public Rarity GetCardRarity()
+    {
+        return cucaCornerController.CalculateCurrentPercentage();
+    }
+
 }

@@ -66,6 +66,37 @@ public class CucaCornerController : MonoBehaviour
         legendaryText.text = legendaryPercentage + "%";
     }
 
+    public Rarity CalculateCurrentPercentage()
+    {
+        int randomValue = Random.Range(0, 100) + 1;
+        int currentValue = 1;
+        if(randomValue >= currentValue && randomValue < currentValue + commomPercentage)
+        {
+            return Rarity.Common;
+        }
+        currentValue += commomPercentage;
+        if (randomValue >= currentValue && randomValue < currentValue + uncommomPercentage)
+        {
+            return Rarity.Uncommon;
+        }
+        currentValue += uncommomPercentage;
+        if (randomValue >= currentValue && randomValue < currentValue + rarePercentage)
+        {
+            return Rarity.Rare;
+        }
+        currentValue += rarePercentage;
+        if (randomValue >= currentValue && randomValue < currentValue + epicPercentage)
+        {
+            return Rarity.Epic;
+        }
+        currentValue += epicPercentage;
+        if (randomValue >= currentValue && randomValue < currentValue + legendaryPercentage)
+        {
+            return Rarity.Legendary;
+        }
+        return Rarity.Common;
+    }
+
     private void ChangeRarityPercentage()
     {
         switch (currentLevel)
