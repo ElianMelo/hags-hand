@@ -9,5 +9,6 @@ public class EnemyDataSO : ScriptableObject
     public float health;
     public int coinReward;
     public int experience;
+    public float damage;
     public Enemy enemyPrefab;
 }

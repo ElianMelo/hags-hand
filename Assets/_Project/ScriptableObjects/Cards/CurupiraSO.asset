@@ -20,7 +20,7 @@ MonoBehaviour:
   specialEffectMultiplier: 0
   specialEffectDuration: 0
   range: 2
-  attackSpeed: 1
+  attackSpeed: 0.5
   damage: 5
   durability: 10
   towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}

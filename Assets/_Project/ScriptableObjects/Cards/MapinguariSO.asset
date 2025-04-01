@@ -15,12 +15,12 @@ MonoBehaviour:
   creatureName: Mapinguari
   cardSprite: {fileID: 21300000, guid: 1264d6510f6dd014fa713ff2921816a1, type: 3}
   cardType: 0
-  rarity: 1
+  rarity: 0
   specialEffect: 0
   specialEffectMultiplier: 0
   specialEffectDuration: 0
   range: 2
-  attackSpeed: 1
+  attackSpeed: 0.25
   damage: 5
   durability: 10
   towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}
