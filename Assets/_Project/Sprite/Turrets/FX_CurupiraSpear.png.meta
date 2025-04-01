@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31ca581ea84883c458f1f55ae38dc042
+guid: a4801f2d71e4a214fa27c61b00ce6c95
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,133 +110,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MGK_Mula_0
+      name: FX_CurupiraSpear_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 181
-        height: 115
+        width: 100
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f31ac51aa752b6d47b492010f61a0e24
-      internalID: 954625141
+      spriteID: 8f6b6f0fa0b5cba44801df056773e6f9
+      internalID: -1013391520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MGK_Mula_1
+      name: FX_CurupiraSpear_1
       rect:
         serializedVersion: 2
-        x: 181
+        x: 101
         y: 0
-        width: 181
-        height: 115
+        width: 100
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73ce953f58583094f852dde7d96c279d
-      internalID: 1522906808
+      spriteID: 987c7b69d1166764db494c88f00e5c0e
+      internalID: 460980990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MGK_Mula_2
+      name: FX_CurupiraSpear_2
       rect:
         serializedVersion: 2
-        x: 362
+        x: 200
         y: 0
-        width: 181
-        height: 115
+        width: 100
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88f6ce5351d64b044966febbccc746c6
-      internalID: -501328091
+      spriteID: a4c2a60e949bcd04d95c5bae10d458aa
+      internalID: 1441823723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MGK_Mula_3
+      name: FX_CurupiraSpear_3
       rect:
         serializedVersion: 2
-        x: 543
+        x: 300
         y: 0
-        width: 181
-        height: 115
+        width: 100
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 987361fd6663cc04484371d328ae539d
-      internalID: 1197780053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGK_Mula_4
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 0
-        width: 181
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d09900ac4d44a8f499b32626fb6b787e
-      internalID: -1657328257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGK_Mula_5
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 0
-        width: 181
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73eadac6334a60d43932fb2a7477d0a1
-      internalID: -628364600
+      spriteID: 8e5bb834524f1e04daa7b886ddf43568
+      internalID: -2007639287
       vertices: []
       indices: 
       edges: []
@@ -245,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 39044892bb169d24a9bd1da6408e02f3
+    spriteID: 8910dd3e73b64624b8b137a9dd20b6fc
     internalID: 0
     vertices: []
     indices: 
@@ -255,12 +211,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MGK_Mula_0: 954625141
-      MGK_Mula_1: 1522906808
-      MGK_Mula_2: -501328091
-      MGK_Mula_3: 1197780053
-      MGK_Mula_4: -1657328257
-      MGK_Mula_5: -628364600
+      FX_CurupiraSpear_0: -1013391520
+      FX_CurupiraSpear_1: 460980990
+      FX_CurupiraSpear_2: 1441823723
+      FX_CurupiraSpear_3: -2007639287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

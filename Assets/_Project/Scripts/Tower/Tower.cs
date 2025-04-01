@@ -67,14 +67,14 @@ public class Tower : MonoBehaviour
         if (card.cardType == CardType.Ranged)
         {
             Vector3 direction = enemyPosition - transform.position;
-            GameObject instance = Instantiate(projectile, transform.position + upOffset, Quaternion.identity);
+            GameObject instance = Instantiate(projectile, transform.position + upOffset, Quaternion.Euler(0f,0f,0f));
             instance.transform.forward = direction;
             Projectile currentProjectile = instance.GetComponent<Projectile>();
             currentProjectile.SetDamage(card.damage);
             currentProjectile.AddForce();
         } else
         {
-            GameObject instance = Instantiate(meleeAttack, enemyPosition + upOffset, Quaternion.identity);
+            GameObject instance = Instantiate(meleeAttack, enemyPosition + upOffset, Quaternion.Euler(0f, 0f, 0f));
             Projectile currentProjectile = instance.GetComponent<Projectile>();
             currentProjectile.SetDamage(card.damage);
         }

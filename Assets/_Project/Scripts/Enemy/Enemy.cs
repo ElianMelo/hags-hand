@@ -35,9 +35,9 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Projectile"))
         {
-            var damage = other.GetComponent<Projectile>().GetDamage();
-            ReceiveDamage(damage);
-            Destroy(other.gameObject, 0.5f);
+            Projectile projectile = other.GetComponent<Projectile>();
+            ReceiveDamage(projectile.GetDamage());
+            projectile.Death();
         }
     }
 
