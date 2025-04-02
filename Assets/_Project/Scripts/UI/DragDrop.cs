@@ -77,7 +77,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                 prefabObject = CardSystemManager.Instance.TowerPrefabEvoke();
             }
             GameObject evokeInstance = Instantiate(prefabObject, playerVirtualHand.transform.position, Quaternion.identity);
-            Destroy(evokeInstance, 2f);
+            Destroy(evokeInstance, 1f);
             Destroy(gameObject);
         };   
     }

@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1901950595, guid: 60faadb7eb68d9548bfc00a5f29305b8, type: 3}
+  m_Sprite: {fileID: 43303798, guid: d5c38b65e6c001246ab4b0abba31012c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 2242293194328159168}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f91846fd4139b7b4ea80ef506f432ee3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 04e2cc69fd7173d4299f5c4a09510f90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 7416548999587121938}
   - component: {fileID: 1467774015636366857}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: MeleeTank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
