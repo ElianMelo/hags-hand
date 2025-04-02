@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1013391520, guid: 27936713d81064745b1dbadcefe4fa60, type: 3}
+  m_Sprite: {fileID: 329104173, guid: 08e8076a65d72394b910fc5b359b6098, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 2632343975245645761}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b2e8b27412eafb49a59c64ec57295c2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 614151eadf19f3345ab843c869cd716d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1475661211830138027}
   - component: {fileID: 7320425784703401420}
   m_Layer: 8
-  m_Name: Projectile_CurupiraSpear
+  m_Name: VanishPrefab
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

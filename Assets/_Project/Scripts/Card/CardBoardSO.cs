@@ -7,6 +7,8 @@ public class CardBoardSO : ScriptableObject
 {
     public List<BoardRarity> boardsRarity = new ();
     public Sprite borderOverlay;
+    public GameObject towerSpawnPrefab;
+    public GameObject magicSpawnPrefab;
 }
 
 [Serializable]

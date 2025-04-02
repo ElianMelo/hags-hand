@@ -14,6 +14,16 @@ public class CardSystemManager : MonoBehaviour
         Instance = this;
     }
 
+    public GameObject TowerPrefabEvoke()
+    {
+        return CardBoardSO.towerSpawnPrefab;
+    }
+
+    public GameObject MagicPrefabEvoke()
+    {
+        return CardBoardSO.magicSpawnPrefab;
+    }
+
     public Sprite RarityToSprite(Rarity rarity)
     {
         foreach (var boardRarity in CardBoardSO.boardsRarity)

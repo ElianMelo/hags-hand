@@ -67,7 +67,19 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         }
 
         bool cardConsumed = playerVirtualHand.CastTrigger();
-        if (cardConsumed) Destroy(gameObject);   
+        if (cardConsumed) {
+            GameObject prefabObject;
+            if (CardSystemManager.Instance.CurrentCardDataSO.cardType == CardType.Magic)
+            {
+                prefabObject = CardSystemManager.Instance.MagicPrefabEvoke();
+            } else
+            {
+                prefabObject = CardSystemManager.Instance.TowerPrefabEvoke();
+            }
+            GameObject evokeInstance = Instantiate(prefabObject, playerVirtualHand.transform.position, Quaternion.identity);
+            Destroy(evokeInstance, 2f);
+            Destroy(gameObject);
+        };   
     }
 
     public void OnPointerDown(PointerEventData eventData)
