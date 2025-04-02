@@ -1,11 +1,39 @@
+using System;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
+
+public enum MouseReaction
+{
+    Regular,
+    Browsing,
+    Holding,
+    Release,
+    Click
+}
 
 public class PlayerVirtualHand : MonoBehaviour
 {
     public LayerMask towerSlotMask;
     public LayerMask enemiesMask;
+    public Animator animator;
+
+    private MouseReaction mouseReaction;
+
+    public void SetMouseReaction(MouseReaction mouseReaction)
+    {
+        this.mouseReaction = mouseReaction;
+        SetupMouseVisuals();
+    }
+
+    private void SetupMouseVisuals()
+    {
+        animator.SetTrigger(ConvertToString(mouseReaction));
+    }
+
+    private string ConvertToString(MouseReaction mouseReaction)
+    {
+        return Enum.GetName(mouseReaction.GetType(), mouseReaction);
+    }
 
     public bool CastTrigger()
     {

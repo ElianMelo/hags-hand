@@ -1450,6 +1450,7 @@ MonoBehaviour:
   enemiesMask:
     serializedVersion: 2
     m_Bits: 128
+  animator: {fileID: 0}
 --- !u!54 &471844128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2760,6 +2761,7 @@ MonoBehaviour:
   legendaryText: {fileID: 87080215}
   levelText: {fileID: 1904268841}
   experienceBar: {fileID: 95780729}
+  animator: {fileID: 0}
 --- !u!1 &938264936
 GameObject:
   m_ObjectHideFlags: 0

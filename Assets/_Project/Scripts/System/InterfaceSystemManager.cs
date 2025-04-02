@@ -7,6 +7,7 @@ public class InterfaceSystemManager : MonoBehaviour
     private StoreCornerController storeCornerController;
     private CucaCornerController cucaCornerController;
     private WaveCornerController waveCornerController;
+    private PlayerVirtualHand playerVirtualHand;
 
     private void Awake()
     {
@@ -14,6 +15,7 @@ public class InterfaceSystemManager : MonoBehaviour
         storeCornerController = GetComponentInChildren<StoreCornerController>();
         cucaCornerController = GetComponentInChildren<CucaCornerController>();
         waveCornerController = GetComponentInChildren<WaveCornerController>();
+        playerVirtualHand = FindFirstObjectByType<PlayerVirtualHand>();
     }
 
     public void WaveDamage(float damage)
@@ -41,4 +43,8 @@ public class InterfaceSystemManager : MonoBehaviour
         cucaCornerController.SetCucaReaction(reaction);
     }
 
+    public void SetMouseReaction(MouseReaction mouseReation)
+    {
+        playerVirtualHand.SetMouseReaction(mouseReation);
+    }
 }
