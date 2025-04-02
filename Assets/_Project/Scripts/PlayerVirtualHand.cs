@@ -21,6 +21,18 @@ public class PlayerVirtualHand : MonoBehaviour
     public bool ConsumeCardMagic()
     {
         CardDataSO cardDataSO = CardSystemManager.Instance.CurrentCardDataSO;
+
+        if(cardDataSO.magicSpawnPrefab)
+        {
+            var projectileInstance = Instantiate(cardDataSO.projectilePrefab.gameObject, transform.position, Quaternion.identity);
+            Projectile projectile = projectileInstance.GetComponent<Projectile>();
+            projectile.SetDamage(cardDataSO.damage);
+            projectile.SetCanBeDestroyed(false);
+            projectile.AddLeftForce();
+            Destroy(projectile, 10f);
+            return true;
+        }
+
         RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, cardDataSO.range, transform.up, cardDataSO.range, enemiesMask);
 
         foreach (var hit in raycastHits)

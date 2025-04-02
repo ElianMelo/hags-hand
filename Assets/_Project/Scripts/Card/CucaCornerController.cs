@@ -1,6 +1,20 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+public enum CucaReaction
+{
+    Happy,
+    Sad,
+    Angry,
+    Thinking,
+    Surprise,
+    Holding,
+    Releasing,
+    Focus,
+    Relief,
+}
 
 public class CucaCornerController : MonoBehaviour
 {
@@ -24,6 +38,27 @@ public class CucaCornerController : MonoBehaviour
     private int currentLevel = 1;
     private int currentExperience = 0;
     private int maxExperience = 20;
+
+    [Header("Cuca")]
+    public Animator animator;
+
+    private CucaReaction cucaReaction;
+
+    public void SetCucaReaction(CucaReaction reaction)
+    {
+        cucaReaction = reaction;
+        SetCucaVisuals();
+    }
+
+    private void SetCucaVisuals()
+    {
+        animator.SetTrigger(ConvertToString(cucaReaction));
+    }
+
+    private string ConvertToString(CucaReaction cucaReaction)
+    {
+        return Enum.GetName(cucaReaction.GetType(), cucaReaction);
+    }
 
     private void LevelUp()
     {
@@ -68,7 +103,7 @@ public class CucaCornerController : MonoBehaviour
 
     public Rarity CalculateCurrentPercentage()
     {
-        int randomValue = Random.Range(0, 100) + 1;
+        int randomValue = UnityEngine.Random.Range(0, 100) + 1;
         int currentValue = 1;
         if(randomValue >= currentValue && randomValue < currentValue + commomPercentage)
         {

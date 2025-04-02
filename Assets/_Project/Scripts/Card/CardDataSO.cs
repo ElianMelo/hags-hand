@@ -14,7 +14,9 @@ public class CardDataSO : ScriptableObject
     public float attackSpeed;
     public float damage;
     public float durability;
+    public bool magicSpawnPrefab = false;
     public Tower towerPrefab;
+    public Projectile projectilePrefab;
 }
 
 public enum CardType

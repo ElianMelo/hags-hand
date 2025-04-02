@@ -36,4 +36,9 @@ public class InterfaceSystemManager : MonoBehaviour
         return cucaCornerController.CalculateCurrentPercentage();
     }
 
+    public void SetCucaReaction(CucaReaction reaction)
+    {
+        cucaCornerController.SetCucaReaction(reaction);
+    }
+
 }
