@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
-  m_Name: MulaSemCabecaSO
+  m_Name: Epic_MulaSemCabecaSO
   m_EditorClassIdentifier: 
   creatureName: Mula
   cardSprite: {fileID: 21300000, guid: 5f15b64ba032ce748845bd252e13b33d, type: 3}
   cardType: 2
-  rarity: 0
+  rarity: 3
   specialEffect: 1
   specialEffectMultiplier: 0
   specialEffectDuration: 2

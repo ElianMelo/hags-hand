@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StoreCornerController : MonoBehaviour
 {
     public GameObject cardTemplate;
-    public List<CardDataSO> cards = new();
+    public CardSpawnerDataSO cardSpawnerDataSO;
     public GameObject listCardsGroup;
     public Button buyCardButton;
     public Button buyExpButton;
@@ -67,11 +67,31 @@ public class StoreCornerController : MonoBehaviour
     {
         Rarity rarity = InterfaceSystemManager.Instance.GetCardRarity();
 
-        CardDataSO selectedCard = cards[Random.Range(0, cards.Count)];
+        CardDataSO selectedCard = GetCardDataSOByRarity(rarity);
+
         GameObject instance = Instantiate(cardTemplate, listCardsGroup.transform);
         instance.transform.SetParent(listCardsGroup.transform);
         instance.GetComponent<DragDrop>().SetupCanvas(canvas);
         instance.GetComponent<CardObject>().CardDataHolderSO = selectedCard;
+    }
+
+    private CardDataSO GetCardDataSOByRarity(Rarity rarity)
+    {
+        switch (rarity)
+        {
+            case Rarity.Common:
+                return cardSpawnerDataSO.commomCards[Random.Range(0, cardSpawnerDataSO.commomCards.Count)];
+            case Rarity.Uncommon:
+                return cardSpawnerDataSO.uncommomCards[Random.Range(0, cardSpawnerDataSO.uncommomCards.Count)];
+            case Rarity.Rare:
+                return cardSpawnerDataSO.rareCards[Random.Range(0, cardSpawnerDataSO.rareCards.Count)];
+            case Rarity.Epic:
+                return cardSpawnerDataSO.epicCards[Random.Range(0, cardSpawnerDataSO.epicCards.Count)];
+            case Rarity.Legendary:
+                return cardSpawnerDataSO.legendaryCards[Random.Range(0, cardSpawnerDataSO.legendaryCards.Count)];
+            default:
+                return cardSpawnerDataSO.commomCards[Random.Range(0, cardSpawnerDataSO.commomCards.Count)];
+        }
     }
 
     private void TryToBuyExp()

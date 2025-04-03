@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
-  m_Name: MapinguariSO
+  m_Name: Rare_CurupiraSO
   m_EditorClassIdentifier: 
-  creatureName: Mapinguari
-  cardSprite: {fileID: 21300000, guid: 1264d6510f6dd014fa713ff2921816a1, type: 3}
-  cardType: 0
-  rarity: 0
+  creatureName: Curupira
+  cardSprite: {fileID: 21300000, guid: a3dc736ace753274fac62ff16a8ab32d, type: 3}
+  cardType: 1
+  rarity: 2
   specialEffect: 0
   specialEffectMultiplier: 0
   specialEffectDuration: 0
-  range: 3
-  attackSpeed: 0.25
+  range: 4
+  attackSpeed: 0.5
   damage: 5
   durability: 10
   magicSpawnPrefab: 0
-  towerPrefab: {fileID: 3666480974190868447, guid: 65fcc748c6da8d647a3a1fa25bfd62f4, type: 3}
+  towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}
   projectilePrefab: {fileID: 0}

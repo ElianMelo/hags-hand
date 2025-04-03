@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
+  m_Name: Epic_MapinguariSO
+  m_EditorClassIdentifier: 
+  creatureName: Mapinguari
+  cardSprite: {fileID: 21300000, guid: 1264d6510f6dd014fa713ff2921816a1, type: 3}
+  cardType: 0
+  rarity: 3
+  specialEffect: 0
+  specialEffectMultiplier: 0
+  specialEffectDuration: 0
+  range: 3
+  attackSpeed: 0.25
+  damage: 5
+  durability: 10
+  magicSpawnPrefab: 0
+  towerPrefab: {fileID: 3666480974190868447, guid: 65fcc748c6da8d647a3a1fa25bfd62f4, type: 3}
+  projectilePrefab: {fileID: 0}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
+  m_Name: Uncommom_MulaSemCabecaSO
+  m_EditorClassIdentifier: 
+  creatureName: Mula
+  cardSprite: {fileID: 21300000, guid: 5f15b64ba032ce748845bd252e13b33d, type: 3}
+  cardType: 2
+  rarity: 1
+  specialEffect: 1
+  specialEffectMultiplier: 0
+  specialEffectDuration: 2
+  range: 5
+  attackSpeed: 1
+  damage: 5
+  durability: 10
+  magicSpawnPrefab: 1
+  towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}
+  projectilePrefab: {fileID: 1475661211830138027, guid: 5bcc562fd0007c34197c4cc13ebf5af5, type: 3}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
-  m_Name: CurupiraSO
+  m_Name: Commom_CurupiraSO
   m_EditorClassIdentifier: 
   creatureName: Curupira
   cardSprite: {fileID: 21300000, guid: a3dc736ace753274fac62ff16a8ab32d, type: 3}

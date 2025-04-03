@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033fbb090e69f3748ac7a383709876e0, type: 3}
+  m_Name: Legendary_CurupiraSO
+  m_EditorClassIdentifier: 
+  creatureName: Curupira
+  cardSprite: {fileID: 21300000, guid: a3dc736ace753274fac62ff16a8ab32d, type: 3}
+  cardType: 1
+  rarity: 4
+  specialEffect: 0
+  specialEffectMultiplier: 0
+  specialEffectDuration: 0
+  range: 4
+  attackSpeed: 0.5
+  damage: 5
+  durability: 10
+  magicSpawnPrefab: 0
+  towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}
+  projectilePrefab: {fileID: 0}

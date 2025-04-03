@@ -13,7 +13,7 @@ public class EnemySpawnerDataSO : ScriptableObject
 public class Wave
 {
     public List<WaveData> waveDatas = new();
-    public int spawnRate;
+    public float spawnRate;
 }
 
 [Serializable]

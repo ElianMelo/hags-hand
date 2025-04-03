@@ -699,10 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardTemplate: {fileID: 5778236489666270744, guid: 0d902fc324be4de4eaaa7a632e7d4a0d, type: 3}
-  cards:
-  - {fileID: 11400000, guid: 82d3aa081f9725c42b6f5777da44773e, type: 2}
-  - {fileID: 11400000, guid: edf40d0bf0b78ab498f904f09fc693b1, type: 2}
-  - {fileID: 11400000, guid: 1644e512f5de85e418618659ad6492a5, type: 2}
+  cardSpawnerDataSO: {fileID: 11400000, guid: 12b8a0b175dfe7c4f89b0b11b0297a14, type: 2}
   listCardsGroup: {fileID: 421654716}
   buyCardButton: {fileID: 1707619886}
   buyExpButton: {fileID: 534318211}
@@ -13003,6 +13000,8 @@ MonoBehaviour:
   legendaryText: {fileID: 87080215}
   levelText: {fileID: 1904268841}
   experienceBar: {fileID: 95780729}
+  maxExperience: 20
+  maxExperienceIncrease: 200
   animator: {fileID: 0}
 --- !u!1 &938264936
 GameObject:

@@ -37,7 +37,9 @@ public class CucaCornerController : MonoBehaviour
 
     private int currentLevel = 1;
     private int currentExperience = 0;
-    private int maxExperience = 20;
+
+    public int maxExperience;
+    public int maxExperienceIncrease;
 
     [Header("Cuca")]
     public Animator animator;
@@ -63,7 +65,8 @@ public class CucaCornerController : MonoBehaviour
     private void LevelUp()
     {
         currentLevel++;
-        if(currentLevel == 10)
+        maxExperience += maxExperienceIncrease;
+        if (currentLevel == 10)
         {
             currentExperience = maxExperience;
             UpdateExperience();

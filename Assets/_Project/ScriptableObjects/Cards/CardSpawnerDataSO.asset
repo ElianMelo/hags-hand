@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06265bec690db7b41aae25bf3044c2c9, type: 3}
+  m_Name: CardSpawnerDataSO
+  m_EditorClassIdentifier: 
+  commomCards:
+  - {fileID: 11400000, guid: 82d3aa081f9725c42b6f5777da44773e, type: 2}
+  - {fileID: 11400000, guid: edf40d0bf0b78ab498f904f09fc693b1, type: 2}
+  - {fileID: 11400000, guid: 1644e512f5de85e418618659ad6492a5, type: 2}
+  uncommomCards:
+  - {fileID: 11400000, guid: 4741c3a2b278a6c49a145b310249e9b9, type: 2}
+  - {fileID: 11400000, guid: 154ea4bf208c3e54fa28244ff1612f49, type: 2}
+  - {fileID: 11400000, guid: d38fd7c9c4e7a5a429291d72a06e609b, type: 2}
+  rareCards:
+  - {fileID: 11400000, guid: d967d52bf279f254fa3ba2e4b63168c5, type: 2}
+  - {fileID: 11400000, guid: 8d3fa221a6799774c87803a118a2a238, type: 2}
+  - {fileID: 11400000, guid: bb26014606b0b994291d2071001afd60, type: 2}
+  epicCards:
+  - {fileID: 11400000, guid: c60972e34f6211f448500aa06324a5fa, type: 2}
+  - {fileID: 11400000, guid: baaa4655bbadb034f8265a81f99ff8ef, type: 2}
+  - {fileID: 11400000, guid: 1bc73082603894e4d883623c5de5f447, type: 2}
+  legendaryCards:
+  - {fileID: 11400000, guid: 473ac1a0be404a94b821f060de27d1ac, type: 2}
+  - {fileID: 11400000, guid: 1aae7a09a4b25124ca2c0b8e8d7ace59, type: 2}
+  - {fileID: 11400000, guid: cd6de7b593a7d2145b5abb00f64222ad, type: 2}
