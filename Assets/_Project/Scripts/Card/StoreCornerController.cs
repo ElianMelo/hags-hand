@@ -27,6 +27,7 @@ public class StoreCornerController : MonoBehaviour
     private void OnDestroy()
     {
         buyCardButton.onClick.RemoveAllListeners();
+        buyExpButton.onClick.RemoveAllListeners();
     }
 
     public void AddCoin(int amount)

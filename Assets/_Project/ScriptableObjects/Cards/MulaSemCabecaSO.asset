@@ -19,7 +19,7 @@ MonoBehaviour:
   specialEffect: 1
   specialEffectMultiplier: 0
   specialEffectDuration: 2
-  range: 2
+  range: 5
   attackSpeed: 1
   damage: 5
   durability: 10

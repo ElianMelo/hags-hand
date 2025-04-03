@@ -1,11 +1,51 @@
+using System;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
+
+public enum MouseReaction
+{
+    Regular,
+    Browsing,
+    Holding,
+    Release,
+    Click
+}
 
 public class PlayerVirtualHand : MonoBehaviour
 {
     public LayerMask towerSlotMask;
     public LayerMask enemiesMask;
+    public Animator animator;
+    public GameObject towerRange;
+
+    private MouseReaction mouseReaction;
+
+    public void SetMouseReaction(MouseReaction mouseReaction)
+    {
+        this.mouseReaction = mouseReaction;
+        SetupMouseVisuals();
+    }
+
+    private void SetupMouseVisuals()
+    {
+        animator.SetTrigger(ConvertToString(mouseReaction));
+    }
+
+    private string ConvertToString(MouseReaction mouseReaction)
+    {
+        return Enum.GetName(mouseReaction.GetType(), mouseReaction);
+    }
+
+    public void ShowTowerRange(float range)
+    {
+        towerRange.transform.localScale = new Vector3(range, range, range);
+        towerRange.SetActive(true);
+    }
+
+    public void HideTowerRange()
+    {
+        towerRange.SetActive(false);
+    }
 
     public bool CastTrigger()
     {
@@ -33,7 +73,7 @@ public class PlayerVirtualHand : MonoBehaviour
             return true;
         }
 
-        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, cardDataSO.range, transform.up, cardDataSO.range, enemiesMask);
+        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, cardDataSO.range/2, transform.up, cardDataSO.range/2, enemiesMask);
 
         foreach (var hit in raycastHits)
         {
