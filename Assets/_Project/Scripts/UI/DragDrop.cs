@@ -15,6 +15,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     private Canvas canvas;
 
+    private RectTransform canvasRectTransform;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -26,6 +28,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void SetupCanvas(Canvas theCanvas)
     {
         canvas = theCanvas;
+        canvasRectTransform = theCanvas.GetComponent<RectTransform>();
     }
 
     private void Start()
@@ -41,6 +44,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         backToHand = false;
         CardSystemManager.Instance.IsDragging = true;
         CardSystemManager.Instance.CurrentCardDataSO = cardObject.CardDataHolderSO;
+        playerVirtualHand.ShowTowerRange(cardObject.CardDataHolderSO.range);
+
+        rectTransform.position = Input.mousePosition;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -55,6 +61,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        playerVirtualHand.HideTowerRange();
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         horizontalLayoutGroup.enabled = true;

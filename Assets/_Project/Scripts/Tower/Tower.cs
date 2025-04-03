@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class Tower : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Tower : MonoBehaviour
     private TowerSlot slot;
     private CardDataSO card;
     private Vector3 upOffset = new Vector3(0f, 0.5f, 0f);
+
+    private float _range = 0f;
 
     private const string AttackAnim = "Attack";
 
@@ -80,9 +83,18 @@ public class Tower : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        //if(_range != 0f)
+        //{
+        //    Gizmos.DrawSphere(transform.position, _range);
+        //}
+    }
+
     public RaycastHit SphereCastEnemy()
     {
-        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, card.range, transform.up, card.range, mask);
+        _range = card.range / 2;
+        RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, _range, transform.up, _range, mask);
 
         if (raycastHits.Length > 0)
         {

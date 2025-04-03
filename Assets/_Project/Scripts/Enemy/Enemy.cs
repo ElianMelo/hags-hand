@@ -53,6 +53,7 @@ public class Enemy : MonoBehaviour
         if(currentHealth <= 0)
         {
             isDead = true;
+            gameObject.layer = LayerMask.NameToLayer("Default");
             currentHealth = 0;
             animator.SetTrigger(DeathAnim);
             enemyFollowTarget.StopFollowing();
