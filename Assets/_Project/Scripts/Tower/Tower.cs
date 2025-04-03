@@ -7,6 +7,7 @@ public class Tower : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject meleeAttack;
+    public GameObject towerDeath;
     public LayerMask mask;
     public GameObject healthCanvas;
     public Animator animator;
@@ -41,6 +42,7 @@ public class Tower : MonoBehaviour
     private void Death()
     {
         slot.FreeTower();
+        GameObject instance = Instantiate(towerDeath, transform.position + upOffset, Quaternion.Euler(0f, 0f, 0f));
         Destroy(gameObject);
     }
 

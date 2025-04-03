@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1594533654, guid: 6b707e859ecaf7b47b01200840521b0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3327043733019425350, guid: adbff8d37da7cd849b4816cab35ec7fc, type: 3}
   meleeAttack: {fileID: 3327043733019425350, guid: c20090ea678ac2f4893b7509d6fd5563, type: 3}
+  towerDeath: {fileID: 3327043733019425350, guid: 8bfbe889899a9644280eee5ee3b6c1fb, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 128

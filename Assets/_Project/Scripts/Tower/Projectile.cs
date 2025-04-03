@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -8,6 +10,7 @@ public class Projectile : MonoBehaviour
     private Collider currentCollider;
     private float damage = 1f;
     private bool canBeDestroyed = true;
+    public GameObject explosion;
 
     private void Awake()
     {
@@ -24,7 +27,11 @@ public class Projectile : MonoBehaviour
         if (!canBeDestroyed) return;
         currentCollider.enabled = false;
         body.linearVelocity = Vector3.zero;
-        Destroy(gameObject, 0.5f);
+        if (explosion != null)
+        {
+            GameObject instance = Instantiate(explosion, transform.position, Quaternion.identity);
+        }
+        Destroy(gameObject);
     }
 
     public float GetDamage()
