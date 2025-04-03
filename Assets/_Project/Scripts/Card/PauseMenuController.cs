@@ -31,12 +31,12 @@ public class PauseMenuController : MonoBehaviour
 
     private void OnResetLevel()
     {
-
+        LevelSystemManager.Instance.GoToLevel();
     }
 
     private void OnMenu()
     {
-
+        LevelSystemManager.Instance.GoToMenu();
     }
 
     private void OnTutorial()

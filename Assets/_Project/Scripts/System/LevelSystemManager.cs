@@ -3,16 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelSystemManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public static LevelSystemManager Instance;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
     public void GoToMenu()
