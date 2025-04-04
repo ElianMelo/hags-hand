@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
     public void ReceiveDamage(float damageAmount)
     {
         if (isDead) return;
+        SoundSystemManager.Instance.EnemyHitSFX();
         currentHealth -= damageAmount;
         if(currentHealth <= 0)
         {
