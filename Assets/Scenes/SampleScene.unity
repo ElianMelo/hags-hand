@@ -13000,8 +13000,8 @@ MonoBehaviour:
   legendaryText: {fileID: 87080215}
   levelText: {fileID: 1904268841}
   experienceBar: {fileID: 95780729}
-  maxExperience: 20
-  maxExperienceIncrease: 200
+  maxExperience: 5
+  maxExperienceIncrease: 1
   animator: {fileID: 0}
 --- !u!1 &938264936
 GameObject:
