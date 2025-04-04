@@ -18,34 +18,34 @@ MonoBehaviour:
     m_Value: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 7.72
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 8.51
   scatter:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.672
   clamp:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 65472
   tint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
   downscale:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   maxIterations:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 6
   dirtTexture:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {fileID: 0}
     dimension: 1
   dirtIntensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &-7317153890215865450
 MonoBehaviour:
@@ -84,7 +84,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.416
+    m_Value: 0.306
   smoothness:
     m_OverrideState: 0
     m_Value: 0.2
@@ -122,10 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
