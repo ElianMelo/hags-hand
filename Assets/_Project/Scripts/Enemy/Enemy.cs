@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
         {
             Projectile projectile = other.GetComponent<Projectile>();
             ReceiveDamage(projectile.GetDamage());
+            ReceiveSpecialEffect(projectile.GetSpecialEffect(), projectile.GetSpecialEffectDuration());
             projectile.Death();
         }
     }
@@ -65,28 +66,28 @@ public class Enemy : MonoBehaviour
         healthBar.UpdateHealthBar(maxHealth, currentHealth);
     }
 
-    public void ReceiveSpecialEffect(SpecialEffect specialEffect)
+    public void ReceiveSpecialEffect(SpecialEffect specialEffect, float duration)
     {
         if (isDead) return;
         switch (specialEffect)
         {
             case SpecialEffect.None: return;
-            case SpecialEffect.Fear: ReceiveFear(); return;
+            case SpecialEffect.Fear: ReceiveFear(duration); return;
             default: return;
         }
     }
 
-    public void ReceiveFear()
+    public void ReceiveFear(float duration)
     {
         if (enemyDataSO.specialEffectResistance == SpecialEffect.Fear) return;
         if (fearCoroutine != null) StopCoroutine(fearCoroutine);
-        fearCoroutine = StartCoroutine(ReceiveFearCoroutine());
+        fearCoroutine = StartCoroutine(ReceiveFearCoroutine(duration));
     }
 
-    private IEnumerator ReceiveFearCoroutine()
+    private IEnumerator ReceiveFearCoroutine(float duration)
     {
         enemyFollowTarget.TargetSpawn();
-        yield return new WaitForSeconds(CardSystemManager.Instance.CurrentCardDataSO.specialEffectDuration);
+        yield return new WaitForSeconds(duration);
         enemyFollowTarget.TargetTheTarget();
     }
 }

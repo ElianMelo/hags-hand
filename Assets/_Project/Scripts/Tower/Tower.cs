@@ -76,12 +76,16 @@ public class Tower : MonoBehaviour
             instance.transform.forward = direction;
             Projectile currentProjectile = instance.GetComponent<Projectile>();
             currentProjectile.SetDamage(card.damage);
+            currentProjectile.SetEspecialEffect(card.specialEffect);
+            currentProjectile.SetSpecialEffectDuration(card.specialEffectDuration);
             currentProjectile.AddForce();
         } else
         {
             GameObject instance = Instantiate(meleeAttack, enemyPosition + upOffset, Quaternion.Euler(0f, 0f, 0f));
             Projectile currentProjectile = instance.GetComponent<Projectile>();
             currentProjectile.SetDamage(card.damage);
+            currentProjectile.SetEspecialEffect(card.specialEffect);
+            currentProjectile.SetSpecialEffectDuration(card.specialEffectDuration);
         }
     }
 

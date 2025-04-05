@@ -66,6 +66,8 @@ public class PlayerVirtualHand : MonoBehaviour
             var projectileInstance = Instantiate(cardDataSO.projectilePrefab.gameObject, transform.position, Quaternion.identity);
             Projectile projectile = projectileInstance.GetComponent<Projectile>();
             projectile.SetDamage(cardDataSO.damage);
+            projectile.SetEspecialEffect(cardDataSO.specialEffect);
+            projectile.SetSpecialEffectDuration(cardDataSO.specialEffectDuration);
             projectile.SetCanBeDestroyed(false);
             projectile.AddLeftForce();
             Destroy(projectile, 10f);
@@ -79,7 +81,7 @@ public class PlayerVirtualHand : MonoBehaviour
         {
             Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
             enemy.ReceiveDamage(cardDataSO.damage);
-            enemy.ReceiveSpecialEffect(cardDataSO.specialEffect);
+            enemy.ReceiveSpecialEffect(cardDataSO.specialEffect, cardDataSO.specialEffectDuration);
         }
 
         InterfaceSystemManager.Instance.ConsumeCard();

@@ -12,6 +12,9 @@ public class Projectile : MonoBehaviour
     private bool canBeDestroyed = true;
     public bool isMelee = false;
     public GameObject explosion;
+    
+    private SpecialEffect specialEffect;
+    private float specialEffectDuration;
 
     private void Awake()
     {
@@ -31,6 +34,7 @@ public class Projectile : MonoBehaviour
         if (explosion != null)
         {
             GameObject instance = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(instance, 1f);
         }
         Destroy(gameObject);
     }
@@ -43,6 +47,26 @@ public class Projectile : MonoBehaviour
     public void SetDamage(float damage)
     {
         this.damage = damage;
+    }
+
+    public void SetEspecialEffect(SpecialEffect specialEffect)
+    {
+        this.specialEffect = specialEffect;
+    }
+
+    public SpecialEffect GetSpecialEffect()
+    {
+        return specialEffect;
+    }
+
+    public void SetSpecialEffectDuration(float specialEffectDuration)
+    {
+        this.specialEffectDuration = specialEffectDuration;
+    }
+
+    public float GetSpecialEffectDuration()
+    {
+        return specialEffectDuration;
     }
 
     public void AddForce()
