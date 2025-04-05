@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 2
-  m_LightType: 3
+  m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 0.06774927, b: 0, a: 1}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 100
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: 0.37405014, y: 0.013050079, z: 0}
+    m_Extent: {x: 9.44495, y: 8.89875, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.66
@@ -156,13 +156,17 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 7.46
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -1.6113191, y: -1.1648502, z: 0.00000007925631}
+  - {x: 0.36558765, y: -0.22112426, z: -0.00000021205848}
+  - {x: 1.9558761, y: -1.4269074, z: 0.000000110495954}
+  - {x: 0.6373513, y: -0.031860404, z: -0.0000002346205}
+  - {x: 2.3586686, y: 1.2764672, z: -0.000000032957452}
+  - {x: 0.40441102, y: 0.23505017, z: 0.00000044881693}
+  - {x: -1.5142605, y: 1.4511722, z: 0.00000003562305}
+  - {x: -0.02264607, y: -0.046419166, z: 0.000000005533595}
 --- !u!1 &3327043733019425350
 GameObject:
   m_ObjectHideFlags: 0
