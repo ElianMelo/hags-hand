@@ -11,6 +11,7 @@ public class WaveCornerController : MonoBehaviour
     private float maxHealth;
     private float currentHealth;
     private int waveCount = 1;
+    private float currentPercentage;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class WaveCornerController : MonoBehaviour
 
     private void UpdateImage()
     {
+        currentPercentage = currentHealth / maxHealth;
+        InterfaceSystemManager.Instance.SetCurrentWavePercentage(currentPercentage);
         waveImage.fillAmount = currentHealth / maxHealth;
     }
 

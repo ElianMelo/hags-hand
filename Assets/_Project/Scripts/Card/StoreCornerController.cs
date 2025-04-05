@@ -13,9 +13,11 @@ public class StoreCornerController : MonoBehaviour
     public Canvas canvas;
     public TMP_Text coinText;
 
-    private const int CARDPRIZE = 5;
-    private const int EXPPRIZE = 5;
-    private const int EXPVALUE = 5;
+    [Header("Values")]
+    public int cardPrize = 5;
+    public int expPrize = 5;
+    public int expAmount = 5;
+
     private int coin = 0;
     private int initialCards = 6;
     private int maxAmountCards = 7;
@@ -67,7 +69,7 @@ public class StoreCornerController : MonoBehaviour
     private void TryToBuyCard()
     {
         if (currentCards == maxAmountCards) return;
-        var isBought = RemoveCoin(CARDPRIZE);
+        var isBought = RemoveCoin(cardPrize);
         if (isBought)
         {
             BuyCard();
@@ -108,7 +110,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void TryToBuyExp()
     {
-        var isBought = RemoveCoin(EXPPRIZE);
+        var isBought = RemoveCoin(expPrize);
         if (isBought)
         {
             BuyExp();
@@ -117,7 +119,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void BuyExp()
     {
-        InterfaceSystemManager.Instance.AddExperience(EXPVALUE);
+        InterfaceSystemManager.Instance.AddExperience(expAmount);
     }
 
     private void OnBuyCardButtonClick()
