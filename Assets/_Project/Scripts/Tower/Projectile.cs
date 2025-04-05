@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     private Collider currentCollider;
     private float damage = 1f;
     private bool canBeDestroyed = true;
+    public bool isMelee = false;
     public GameObject explosion;
 
     private void Awake()
@@ -25,7 +26,7 @@ public class Projectile : MonoBehaviour
     public void Death()
     {
         if (!canBeDestroyed) return;
-        currentCollider.enabled = false;
+        if(!isMelee) currentCollider.enabled = false;
         body.linearVelocity = Vector3.zero;
         if (explosion != null)
         {
