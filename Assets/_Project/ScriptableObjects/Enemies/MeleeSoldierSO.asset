@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MeleeSoldierSO
   m_EditorClassIdentifier: 
   enemyName: Soldier
-  specialEffectResistance: 0
+  specialEffectResistance: 1
   speed: 1.5
-  health: 10
+  health: 20
   coinReward: 5
   experience: 5
   damage: 5

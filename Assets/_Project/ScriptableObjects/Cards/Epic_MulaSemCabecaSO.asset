@@ -18,7 +18,7 @@ MonoBehaviour:
   rarity: 3
   specialEffect: 1
   specialEffectMultiplier: 0
-  specialEffectDuration: 2
+  specialEffectDuration: 3
   range: 5
   attackSpeed: 0.8
   damage: 7

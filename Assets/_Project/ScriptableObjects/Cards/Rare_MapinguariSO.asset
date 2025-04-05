@@ -20,9 +20,10 @@ MonoBehaviour:
   specialEffectMultiplier: 0
   specialEffectDuration: 0
   range: 6
-  attackSpeed: 0.4
+  attackSpeed: 1
   damage: 7
   durability: 10
   magicSpawnPrefab: 0
+  addLeftForce: 0
   towerPrefab: {fileID: 3666480974190868447, guid: 65fcc748c6da8d647a3a1fa25bfd62f4, type: 3}
   projectilePrefab: {fileID: 0}
