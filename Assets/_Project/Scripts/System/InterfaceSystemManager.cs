@@ -10,6 +10,8 @@ public class InterfaceSystemManager : MonoBehaviour
     private WaveCornerController waveCornerController;
     private PlayerVirtualHand playerVirtualHand;
 
+    private float currentWavePercentage;
+
     private void Awake()
     {
         Instance = this;
@@ -63,6 +65,16 @@ public class InterfaceSystemManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         SetMouseReaction(mouseReation);
+    }
+
+    public float GetCurrentWavePercentage()
+    {
+        return currentWavePercentage;
+    }
+
+    public void SetCurrentWavePercentage(float currentWavePercentage)
+    {
+        this.currentWavePercentage = currentWavePercentage;
     }
 
     public void ConsumeCard()

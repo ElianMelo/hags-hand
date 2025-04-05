@@ -4,6 +4,12 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public EnemySpawnerDataSO enemySpawnerDataSO;
+    public EnemyDataSO eliteEnemy;
+    public float firstPercentage;
+    public float secondPercentage;
+    public float eliteTime;
+    public int firstPercentageAmount;
+    public int secondPercentageAmount;
     public Transform enemyTarget;
 
     private int currentWave = 0;
@@ -11,6 +17,37 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnEliteEnemies());
+    }
+
+    private IEnumerator SpawnEliteEnemies()
+    {
+        if (InterfaceSystemManager.Instance.GetCurrentWavePercentage() >= secondPercentage)
+        {
+            for (int i = 0; i < secondPercentageAmount; i++)
+            {
+                SpawnEnemy(eliteEnemy);
+            }
+        }
+        else if (InterfaceSystemManager.Instance.GetCurrentWavePercentage() >= firstPercentage)
+        {
+            for (int i = 0; i < firstPercentageAmount; i++)
+            {
+                SpawnEnemy(eliteEnemy);
+            }
+        }
+        yield return new WaitForSeconds(eliteTime);
+        StartCoroutine(SpawnEliteEnemies());
+    }
+
+    private void SpawnEnemy(EnemyDataSO currentEnemyData)
+    {
+        GameObject instance = Instantiate(currentEnemyData.enemyPrefab.gameObject, transform.position, Quaternion.identity);
+        EnemyFollowTarget enemyFollowTarget = instance.GetComponent<EnemyFollowTarget>();
+        enemyFollowTarget.SetupTargets(enemyTarget, transform);
+        enemyFollowTarget.SetupSpeed(currentEnemyData.speed);
+        Enemy enemy = instance.GetComponent<Enemy>();
+        enemy.SetupEnemyDataSO(currentEnemyData);
     }
 
     private IEnumerator SpawnEnemies()
@@ -28,12 +65,7 @@ public class EnemySpawner : MonoBehaviour
 
             for (int j = 0; j < waveEnemyAmount; j++)
             {
-                GameObject instance = Instantiate(currentEnemyData.enemyPrefab.gameObject, transform.position, Quaternion.identity);
-                EnemyFollowTarget enemyFollowTarget = instance.GetComponent<EnemyFollowTarget>();
-                enemyFollowTarget.SetupTargets(enemyTarget, transform);
-                enemyFollowTarget.SetupSpeed(currentEnemyData.speed);
-                Enemy enemy = instance.GetComponent<Enemy>();
-                enemy.SetupEnemyDataSO(currentEnemyData);
+                SpawnEnemy(currentEnemyData);
                 yield return new WaitForSeconds(enemySpawnerDataSO.waves[currentWave].spawnRate);
             }
         }
