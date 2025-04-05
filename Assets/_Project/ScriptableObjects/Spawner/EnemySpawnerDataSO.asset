@@ -31,4 +31,34 @@ MonoBehaviour:
     - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
       amount: 10
     spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 10
+    spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 10
+    spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 10
+    spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 300
+    - enemyData: {fileID: 11400000, guid: a48ca8470a5a8b448968816f12c4de7c, type: 2}
+      amount: 100
+    spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 10
+    spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 10
+    spawnRate: 0.1
+  - waveDatas:
+    - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
+      amount: 10
+    spawnRate: 0.1
   delayBetweenWaves: 7

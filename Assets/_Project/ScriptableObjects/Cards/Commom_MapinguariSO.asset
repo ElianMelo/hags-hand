@@ -20,7 +20,7 @@ MonoBehaviour:
   specialEffectMultiplier: 0
   specialEffectDuration: 0
   range: 3
-  attackSpeed: 0.25
+  attackSpeed: 2
   damage: 5
   durability: 10
   magicSpawnPrefab: 0
