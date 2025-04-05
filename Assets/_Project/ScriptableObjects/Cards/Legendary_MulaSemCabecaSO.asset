@@ -24,5 +24,6 @@ MonoBehaviour:
   damage: 5
   durability: 10
   magicSpawnPrefab: 1
+  addLeftForce: 1
   towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}
   projectilePrefab: {fileID: 1475661211830138027, guid: 5bcc562fd0007c34197c4cc13ebf5af5, type: 3}

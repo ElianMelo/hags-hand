@@ -15,6 +15,7 @@ public class CardDataSO : ScriptableObject
     public float damage;
     public float durability;
     public bool magicSpawnPrefab = false;
+    public bool addLeftForce = false;
     public Tower towerPrefab;
     public Projectile projectilePrefab;
 }

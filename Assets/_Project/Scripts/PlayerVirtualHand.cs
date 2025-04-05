@@ -69,8 +69,12 @@ public class PlayerVirtualHand : MonoBehaviour
             projectile.SetEspecialEffect(cardDataSO.specialEffect);
             projectile.SetSpecialEffectDuration(cardDataSO.specialEffectDuration);
             projectile.SetCanBeDestroyed(false);
-            projectile.AddLeftForce();
-            Destroy(projectile, 10f);
+            if (cardDataSO.addLeftForce)
+            {
+                projectile.AddLeftForce();
+                Destroy(projectile.gameObject, 10f);
+            }
+            Destroy(projectile.gameObject, 2f);
             InterfaceSystemManager.Instance.ConsumeCard();
             return true;
         }

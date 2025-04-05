@@ -12,6 +12,11 @@ public class SoundSystemManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        
+    }
+
     public void EnemyHitSFX()
     {
         enemyHitSFX?.PlayFeedbacks();
