@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,9 +6,11 @@ public class WaveCornerController : MonoBehaviour
 {
     public Image waveImage;
     public float health;
+    public TMP_Text waveCountText;
 
     private float maxHealth;
     private float currentHealth;
+    private int waveCount = 1;
 
     private void Start()
     {
@@ -24,5 +27,16 @@ public class WaveCornerController : MonoBehaviour
     private void UpdateImage()
     {
         waveImage.fillAmount = currentHealth / maxHealth;
+    }
+
+    public void AddWaveCount()
+    {
+        waveCount++;
+        UpdateWaveCont();
+    }
+
+    private void UpdateWaveCont()
+    {
+        waveCountText.text = "Wave " + waveCount;
     }
 }

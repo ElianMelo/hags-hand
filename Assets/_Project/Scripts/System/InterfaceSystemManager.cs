@@ -24,6 +24,11 @@ public class InterfaceSystemManager : MonoBehaviour
         waveCornerController.ReceiveDamage(damage);
     }
 
+    public void AddWaveCount()
+    {
+        waveCornerController.AddWaveCount();
+    }
+
     public void AddCoin(int amount)
     {
         storeCornerController.AddCoin(amount);
