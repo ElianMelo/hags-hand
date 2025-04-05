@@ -17,9 +17,14 @@ public class StoreCornerController : MonoBehaviour
     private const int EXPPRIZE = 5;
     private const int EXPVALUE = 5;
     private int coin = 0;
+    private int initialCards = 6;
+    private int maxAmountCards = 7;
+    private int currentCards;
 
     void Start()
     {
+        currentCards = initialCards;
+
         buyCardButton.onClick.AddListener(OnBuyCardButtonClick);
         buyExpButton.onClick.AddListener(OnBuyExpButtonClick);
     }
@@ -28,6 +33,11 @@ public class StoreCornerController : MonoBehaviour
     {
         buyCardButton.onClick.RemoveAllListeners();
         buyExpButton.onClick.RemoveAllListeners();
+    }
+
+    public void ConsumeCard()
+    {
+        currentCards--;
     }
 
     public void AddCoin(int amount)
@@ -56,6 +66,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void TryToBuyCard()
     {
+        if (currentCards == maxAmountCards) return;
         var isBought = RemoveCoin(CARDPRIZE);
         if (isBought)
         {
@@ -65,6 +76,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void BuyCard()
     {
+        currentCards++;
         Rarity rarity = InterfaceSystemManager.Instance.GetCardRarity();
 
         CardDataSO selectedCard = GetCardDataSOByRarity(rarity);

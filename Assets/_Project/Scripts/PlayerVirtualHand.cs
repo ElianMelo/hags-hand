@@ -69,6 +69,7 @@ public class PlayerVirtualHand : MonoBehaviour
             projectile.SetCanBeDestroyed(false);
             projectile.AddLeftForce();
             Destroy(projectile, 10f);
+            InterfaceSystemManager.Instance.ConsumeCard();
             return true;
         }
 
@@ -81,6 +82,7 @@ public class PlayerVirtualHand : MonoBehaviour
             enemy.ReceiveSpecialEffect(cardDataSO.specialEffect);
         }
 
+        InterfaceSystemManager.Instance.ConsumeCard();
         return true;
     }
 
@@ -94,6 +96,7 @@ public class PlayerVirtualHand : MonoBehaviour
             var result = raycastHits.FirstOrDefault();
             TowerSlot towerSlot = result.collider.gameObject.GetComponent<TowerSlot>();
             bool isSlotAvaliable = towerSlot.UseTowerObject(cardDataSO);
+            if(isSlotAvaliable) InterfaceSystemManager.Instance.ConsumeCard();
             return isSlotAvaliable;
         }
 

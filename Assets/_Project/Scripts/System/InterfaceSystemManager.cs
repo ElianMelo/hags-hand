@@ -59,4 +59,9 @@ public class InterfaceSystemManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         SetMouseReaction(mouseReation);
     }
+
+    public void ConsumeCard()
+    {
+        storeCornerController.ConsumeCard();
+    }
 }
