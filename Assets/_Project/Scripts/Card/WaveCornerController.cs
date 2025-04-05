@@ -28,6 +28,10 @@ public class WaveCornerController : MonoBehaviour
     private void UpdateImage()
     {
         currentPercentage = currentHealth / maxHealth;
+        if(currentPercentage >= 1)
+        {
+            LevelSystemManager.Instance.GoToLose();
+        }
         InterfaceSystemManager.Instance.SetCurrentWavePercentage(currentPercentage);
         waveImage.fillAmount = currentHealth / maxHealth;
     }

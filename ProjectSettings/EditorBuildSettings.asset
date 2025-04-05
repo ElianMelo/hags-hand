@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a0bfd0993a1c47c40b3199bdfa91cb67
   - enabled: 1
+    path: Assets/Scenes/Lore.unity
+    guid: ea31920290f9190489add884a59f3df9
+  - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: 47d2b7f38e70cb64a8edfc74e84391f8
   - enabled: 1
     path: Assets/Scenes/Win.unity
-    guid: 2efbbafe5d1efc74c84b062835c4570f
+    guid: c4f3e8e77a7840c4fa5136a88e44c813
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 46fe3b39bb0c73c4d993dbc99e63d26a
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

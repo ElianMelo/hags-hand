@@ -15,6 +15,11 @@ public class LevelSystemManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void GoToLore()
+    {
+        SceneManager.LoadScene("Lore");
+    }
+
     public void GoToLevel()
     {
         SceneManager.LoadScene("Level");
@@ -23,5 +28,10 @@ public class LevelSystemManager : MonoBehaviour
     public void GoToWin()
     {
         SceneManager.LoadScene("Win");
+    }
+
+    public void GoToLose()
+    {
+        SceneManager.LoadScene("Lose");
     }
 }

@@ -915,8 +915,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2014277612}
-        m_TargetAssemblyTypeName: LevelSystemManager, Assembly-CSharp
-        m_MethodName: GoToLevel
+        m_TargetAssemblyTypeName: LevelSystemManager, Project
+        m_MethodName: GoToLore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

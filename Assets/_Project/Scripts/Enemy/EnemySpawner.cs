@@ -52,7 +52,11 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
     {
-        if (currentWave >= enemySpawnerDataSO.waves.Count) yield break;
+        if (currentWave >= enemySpawnerDataSO.waves.Count)
+        {
+            LevelSystemManager.Instance.GoToWin();
+            yield break;
+        }
         int waveAmount = enemySpawnerDataSO.waves[currentWave].waveDatas.Count;
         int waveCount;
 
@@ -71,9 +75,13 @@ public class EnemySpawner : MonoBehaviour
         }
 
         yield return new WaitForSeconds(enemySpawnerDataSO.delayBetweenWaves);
-        InterfaceSystemManager.Instance.AddWaveCount();
-
+        
         currentWave++;
+
+        if (currentWave < enemySpawnerDataSO.waves.Count)
+        {
+            InterfaceSystemManager.Instance.AddWaveCount();
+        }
 
         StartCoroutine(SpawnEnemies());
     }
