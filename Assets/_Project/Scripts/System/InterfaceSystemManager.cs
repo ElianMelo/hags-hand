@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class InterfaceSystemManager : MonoBehaviour
@@ -45,6 +46,17 @@ public class InterfaceSystemManager : MonoBehaviour
 
     public void SetMouseReaction(MouseReaction mouseReation)
     {
-        playerVirtualHand.SetMouseReaction(mouseReation);
+        CursorSystemManager.Instance.SetMouseReaction(mouseReation);
+    }
+
+    public void SetMouseReactionDelayed(MouseReaction mouseReation, float time)
+    {
+        StartCoroutine(SetMouseReactionDelayedCoroutine(mouseReation, time));
+    }
+
+    private IEnumerator SetMouseReactionDelayedCoroutine(MouseReaction mouseReation, float time)
+    {
+        yield return new WaitForSeconds(time);
+        SetMouseReaction(mouseReation);
     }
 }

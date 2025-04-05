@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler,
-    IDropHandler
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler,
+    IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -44,6 +44,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         backToHand = false;
         CardSystemManager.Instance.IsDragging = true;
         CardSystemManager.Instance.CurrentCardDataSO = cardObject.CardDataHolderSO;
+        InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Hold);
         playerVirtualHand.ShowTowerRange(cardObject.CardDataHolderSO.range);
 
         rectTransform.position = Input.mousePosition;
@@ -51,6 +52,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
+        InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Hold);
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
@@ -66,6 +68,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.blocksRaycasts = true;
         horizontalLayoutGroup.enabled = true;
         CardSystemManager.Instance.IsDragging = false;
+        InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Release);
+        InterfaceSystemManager.Instance.SetMouseReactionDelayed(MouseReaction.Neutral, 0.5f);
 
         if (backToHand)
         {
@@ -91,11 +95,21 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
+        
     }
 
     public void OnDrop(PointerEventData eventData)
     {
         
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Hover);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Neutral);
     }
 }

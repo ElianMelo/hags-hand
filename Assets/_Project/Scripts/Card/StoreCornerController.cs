@@ -51,7 +51,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void SetCoinText()
     {
-        coinText.text = "COIN: " + coin;
+        coinText.text = coin.ToString();
     }
 
     private void TryToBuyCard()

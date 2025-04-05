@@ -4,11 +4,10 @@ using UnityEngine;
 
 public enum MouseReaction
 {
-    Regular,
-    Browsing,
-    Holding,
-    Release,
-    Click
+    Hold,
+    Hover,
+    Neutral,
+    Release
 }
 
 public class PlayerVirtualHand : MonoBehaviour
