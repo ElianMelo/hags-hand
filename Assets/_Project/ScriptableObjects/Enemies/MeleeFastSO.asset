@@ -17,6 +17,6 @@ MonoBehaviour:
   speed: 2
   health: 10
   coinReward: 3
-  experience: 2
+  experience: 3
   damage: 3
   enemyPrefab: {fileID: 3210896807166030665, guid: eb032279a8478a14aabcc806b284b5b0, type: 3}

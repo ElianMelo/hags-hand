@@ -22,7 +22,8 @@ MonoBehaviour:
   range: 8
   attackSpeed: 0.2
   damage: 15
-  durability: 25
+  durability: 30
   magicSpawnPrefab: 0
+  addLeftForce: 0
   towerPrefab: {fileID: 3666480974190868447, guid: 88a30fd20dbffb345a9cf4167f02ca77, type: 3}
   projectilePrefab: {fileID: 0}

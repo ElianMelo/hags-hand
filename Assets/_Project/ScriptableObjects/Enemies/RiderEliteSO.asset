@@ -15,8 +15,8 @@ MonoBehaviour:
   enemyName: Rider
   specialEffectResistance: 0
   speed: 1
-  health: 30
+  health: 40
   coinReward: 10
   experience: 10
-  damage: 5
+  damage: 7
   enemyPrefab: {fileID: 3210896807166030665, guid: e669dbcce5c30f54a922964f8f04ea0d, type: 3}

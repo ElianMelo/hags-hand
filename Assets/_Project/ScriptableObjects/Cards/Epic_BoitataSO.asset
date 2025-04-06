@@ -21,7 +21,7 @@ MonoBehaviour:
   specialEffectDuration: 2
   range: 8
   attackSpeed: 0.6
-  damage: 6
+  damage: 8
   durability: 10
   magicSpawnPrefab: 1
   addLeftForce: 0
