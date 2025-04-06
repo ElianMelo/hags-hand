@@ -973,8 +973,8 @@ MonoBehaviour:
   canvas: {fileID: 1626652518}
   coinText: {fileID: 569049682}
   cardPrize: 5
-  expPrize: 8
-  expAmount: 7
+  expPrize: 5
+  expAmount: 5
 --- !u!1 &221410227
 GameObject:
   m_ObjectHideFlags: 0
@@ -7283,7 +7283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -7333,7 +7333,7 @@ MonoBehaviour:
   - {fileID: -718282918, guid: 15f636f1ae5e4784dba0b15545ff5990, type: 3}
   - {fileID: -539283247, guid: 15f636f1ae5e4784dba0b15545ff5990, type: 3}
   - {fileID: -1748320870, guid: 15f636f1ae5e4784dba0b15545ff5990, type: 3}
-  spritePerFrame: 12
+  spritePerFrame: 26
   loop: 1
   destroyOnEnd: 0
 --- !u!1 &471844121
@@ -7753,8 +7753,8 @@ MonoBehaviour:
         PoolSize: 10
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
-        MinVolume: 0.4
-        MaxVolume: 0.5
+        MinVolume: 0.3
+        MaxVolume: 0.4
         MinPitch: 0.8
         MaxPitch: 1.2
         SfxAudioMixerGroup: {fileID: 0}
@@ -8109,6 +8109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595722872}
+  - component: {fileID: 595722873}
   m_Layer: 5
   m_Name: Rarity
   m_TagString: Untagged
@@ -8140,6 +8141,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 124.021}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &595722873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595722871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &604975481
 GameObject:
   m_ObjectHideFlags: 0
@@ -14782,7 +14835,7 @@ MonoBehaviour:
   levelText: {fileID: 1904268841}
   experienceBar: {fileID: 95780729}
   maxExperience: 20
-  maxExperienceIncrease: 40
+  maxExperienceIncrease: 50
   animator: {fileID: 0}
 --- !u!1 &942717363
 GameObject:
@@ -14991,8 +15044,8 @@ MonoBehaviour:
         PoolSize: 10
         UseLegacyEventsMode: 0
         StopSoundOnFeedbackStop: 1
-        MinVolume: 0.4
-        MaxVolume: 0.5
+        MinVolume: 0.2
+        MaxVolume: 0.3
         MinPitch: 0.8
         MaxPitch: 1.2
         SfxAudioMixerGroup: {fileID: 0}
@@ -21637,7 +21690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveImage: {fileID: 1600407458}
-  health: 120
+  health: 50
   waveCountText: {fileID: 1946800603}
 --- !u!1 &1460348175
 GameObject:
@@ -34972,7 +35025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -14.999481}
+  m_AnchoredPosition: {x: 0, y: -14.999451}
   m_SizeDelta: {x: 1146, y: 155}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2021348290
