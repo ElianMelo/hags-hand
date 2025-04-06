@@ -84,9 +84,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             GameObject prefabObject;
             if (CardSystemManager.Instance.CurrentCardDataSO.cardType == CardType.Magic)
             {
+                SoundSystemManager.Instance.MagicPlacement();
                 prefabObject = CardSystemManager.Instance.MagicPrefabEvoke();
             } else
             {
+                SoundSystemManager.Instance.TurretPlacement();
                 prefabObject = CardSystemManager.Instance.TowerPrefabEvoke();
             }
             GameObject evokeInstance = Instantiate(prefabObject, playerVirtualHand.transform.position, Quaternion.identity);

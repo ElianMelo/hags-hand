@@ -15,6 +15,11 @@ public class SoundSystemManager : MonoBehaviour
     [SerializeField] private MMFeedbacks menuSelection;
     [SerializeField] private MMFeedbacks enemyDie;
 
+    [SerializeField] private MMFeedbacks waveStart;
+    [SerializeField] private MMFeedbacks playerHurt;
+    [SerializeField] private MMFeedbacks magicPlacement;
+    [SerializeField] private MMFeedbacks turretPlacement;
+
     private void Awake() { Instance = this; }
 
     public void EnemyHitSFX() { enemyHitSFX?.PlayFeedbacks(); }
@@ -26,4 +31,8 @@ public class SoundSystemManager : MonoBehaviour
     public void UpgradeLevel() { upgradeLevel?.PlayFeedbacks(); }
     public void MenuSelection() { menuSelection?.PlayFeedbacks(); }
     public void EnemyDie() { enemyDie?.PlayFeedbacks(); }
+    public void WaveStart() { waveStart?.PlayFeedbacks(); }
+    public void PlayerHurt() { playerHurt?.PlayFeedbacks(); }
+    public void MagicPlacement() { magicPlacement?.PlayFeedbacks(); }
+    public void TurretPlacement() { turretPlacement?.PlayFeedbacks(); }
 }

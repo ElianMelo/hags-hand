@@ -22,6 +22,7 @@ public class WaveCornerController : MonoBehaviour
     public void ReceiveDamage(float damage)
     {
         currentHealth += damage;
+        SoundSystemManager.Instance.PlayerHurt();
         UpdateImage();
     }
 

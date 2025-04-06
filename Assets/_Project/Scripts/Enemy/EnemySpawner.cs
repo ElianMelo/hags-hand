@@ -57,6 +57,10 @@ public class EnemySpawner : MonoBehaviour
             LevelSystemManager.Instance.GoToWin();
             yield break;
         }
+        if(currentWave == 0)
+        {
+            SoundSystemManager.Instance.WaveStart();
+        }
         int waveAmount = enemySpawnerDataSO.waves[currentWave].waveDatas.Count;
         int waveCount;
 
@@ -77,6 +81,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(enemySpawnerDataSO.delayBetweenWaves);
         
         currentWave++;
+        SoundSystemManager.Instance.WaveStart();
 
         if (currentWave < enemySpawnerDataSO.waves.Count)
         {
