@@ -109,10 +109,12 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         SoundSystemManager.Instance.CardHover();
         InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Hover);
+        transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Neutral);
+        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
     }
 }
