@@ -23,6 +23,8 @@ public class SoundSystemManager : MonoBehaviour
     [SerializeField] private MMFeedbacks turretDestroy;
     [SerializeField] private MMFeedbacks alert;
 
+    [SerializeField] private MMFeedbacks buyXp;
+
     private void Awake() { Instance = this; }
 
     public void EnemyHitSFX() { enemyHitSFX?.PlayFeedbacks(); }
@@ -40,4 +42,5 @@ public class SoundSystemManager : MonoBehaviour
     public void TurretPlacement() { turretPlacement?.PlayFeedbacks(); }
     public void TurretDestroy() { turretDestroy?.PlayFeedbacks(); }
     public void Alert() { alert?.PlayFeedbacks(); }
+    public void BuyXP() { buyXp?.PlayFeedbacks(); }
 }

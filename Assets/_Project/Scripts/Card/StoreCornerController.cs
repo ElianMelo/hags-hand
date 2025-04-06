@@ -120,6 +120,7 @@ public class StoreCornerController : MonoBehaviour
 
     private void BuyExp()
     {
+        SoundSystemManager.Instance.BuyXP();
         InterfaceSystemManager.Instance.AddExperience(expAmount);
     }
 
