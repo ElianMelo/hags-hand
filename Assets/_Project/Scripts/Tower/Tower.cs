@@ -42,6 +42,7 @@ public class Tower : MonoBehaviour
     private void Death()
     {
         slot.FreeTower();
+        SoundSystemManager.Instance.TurretDestroy();
         GameObject instance = Instantiate(towerDeath, transform.position + upOffset, Quaternion.Euler(0f, 0f, 0f));
         Destroy(gameObject);
     }

@@ -122,10 +122,10 @@ QualitySettings:
     Nintendo Switch: 1
     PS4: 1
     PS5: 1
-    Server: 0
+    Server: 1
     Stadia: 0
     Standalone: 1
-    WebGL: 0
+    WebGL: 1
     Windows Store Apps: 0
     XboxOne: 0
     iPhone: 0

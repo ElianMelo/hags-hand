@@ -6,6 +6,7 @@ public class EnemyFollowTarget : MonoBehaviour
     private float speed;
 
     private NavMeshAgent agent;
+    private SpriteRenderer spriteRenderer;
     private Transform currentTarget;
 
     private Transform target;
@@ -14,6 +15,7 @@ public class EnemyFollowTarget : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void SetupSpeed(float speed)
@@ -32,6 +34,13 @@ public class EnemyFollowTarget : MonoBehaviour
     {
         if (currentTarget == null) return;
         agent.destination = currentTarget.transform.position;
+        if(agent.nextPosition.x < transform.position.x)
+        {
+            spriteRenderer.flipX = true;
+        } else
+        {
+            spriteRenderer.flipX = false;
+        }
         agent.angularSpeed = 0f;
         agent.speed = speed;
     }

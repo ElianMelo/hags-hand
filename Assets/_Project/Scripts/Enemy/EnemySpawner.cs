@@ -14,6 +14,9 @@ public class EnemySpawner : MonoBehaviour
 
     private int currentWave = 0;
 
+    private bool firstTimeFirstPercentage = true;
+    private bool firstTimeSecondPercentage = true;
+
     void Start()
     {
         StartCoroutine(SpawnEnemies());
@@ -24,6 +27,11 @@ public class EnemySpawner : MonoBehaviour
     {
         if (InterfaceSystemManager.Instance.GetCurrentWavePercentage() >= secondPercentage)
         {
+            if (firstTimeSecondPercentage)
+            {
+                firstTimeSecondPercentage = false;
+                SoundSystemManager.Instance.Alert();
+            }
             for (int i = 0; i < secondPercentageAmount; i++)
             {
                 SpawnEnemy(eliteEnemy);
@@ -31,6 +39,11 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (InterfaceSystemManager.Instance.GetCurrentWavePercentage() >= firstPercentage)
         {
+            if(firstTimeFirstPercentage)
+            {
+                firstTimeFirstPercentage = false;
+                SoundSystemManager.Instance.Alert();
+            }
             for (int i = 0; i < firstPercentageAmount; i++)
             {
                 SpawnEnemy(eliteEnemy);

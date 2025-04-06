@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e77510fff16c94c8bcf611a18220bd, type: 3}
   m_Name: RiderEliteSO
   m_EditorClassIdentifier: 
-  enemyName: Rider
+  enemyName: RiderElite
   specialEffectResistance: 0
-  speed: 1
+  speed: 2
   health: 40
   coinReward: 10
   experience: 10
