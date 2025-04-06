@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
         if(currentHealth <= 0)
         {
             isDead = true;
+            SoundSystemManager.Instance.EnemyDie();
             gameObject.layer = LayerMask.NameToLayer("Default");
             currentHealth = 0;
             animator.SetTrigger(DeathAnim);

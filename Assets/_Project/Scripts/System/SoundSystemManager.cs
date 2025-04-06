@@ -13,6 +13,7 @@ public class SoundSystemManager : MonoBehaviour
     [SerializeField] private MMFeedbacks menuClick;
     [SerializeField] private MMFeedbacks upgradeLevel;
     [SerializeField] private MMFeedbacks menuSelection;
+    [SerializeField] private MMFeedbacks enemyDie;
 
     private void Awake() { Instance = this; }
 
@@ -24,4 +25,5 @@ public class SoundSystemManager : MonoBehaviour
     public void MenuClick() { menuClick?.PlayFeedbacks(); }
     public void UpgradeLevel() { upgradeLevel?.PlayFeedbacks(); }
     public void MenuSelection() { menuSelection?.PlayFeedbacks(); }
+    public void EnemyDie() { enemyDie?.PlayFeedbacks(); }
 }
