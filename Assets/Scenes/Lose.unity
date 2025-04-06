@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lose
+  m_text: You Lose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53094f8a67b895f46a9386762929464b, type: 2}
   m_sharedMaterial: {fileID: 3753327535525957338, guid: 53094f8a67b895f46a9386762929464b, type: 2}
@@ -687,8 +687,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1977948371}
-  - {fileID: 1944562813}
   - {fileID: 1110286959}
+  - {fileID: 1944562813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fae3ac8e93a304d40b1bc700023b09ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 549fda81ebf76f54283031931387becf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
