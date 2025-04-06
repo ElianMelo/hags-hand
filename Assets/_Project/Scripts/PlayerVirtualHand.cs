@@ -106,6 +106,7 @@ public class PlayerVirtualHand : MonoBehaviour
             return isSlotAvaliable;
         }
 
+        SoundSystemManager.Instance.CardCancel();
         return false;
     }
 }

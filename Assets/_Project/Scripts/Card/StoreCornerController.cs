@@ -79,6 +79,7 @@ public class StoreCornerController : MonoBehaviour
     private void BuyCard()
     {
         currentCards++;
+        SoundSystemManager.Instance.BuyDrawCard();
         Rarity rarity = InterfaceSystemManager.Instance.GetCardRarity();
 
         CardDataSO selectedCard = GetCardDataSOByRarity(rarity);

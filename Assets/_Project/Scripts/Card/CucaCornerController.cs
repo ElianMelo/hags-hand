@@ -64,6 +64,7 @@ public class CucaCornerController : MonoBehaviour
 
     private void LevelUp()
     {
+        SoundSystemManager.Instance.UpgradeLevel();
         currentLevel++;
         maxExperience += maxExperienceIncrease;
         if (currentLevel == 10)
