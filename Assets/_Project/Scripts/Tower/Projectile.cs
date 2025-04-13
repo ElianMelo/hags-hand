@@ -12,7 +12,9 @@ public class Projectile : MonoBehaviour
     private bool canBeDestroyed = true;
     public bool isMelee = false;
     public GameObject explosion;
-    
+
+    [HideInInspector] public bool earlyReturn = false;
+
     private SpecialEffect specialEffect;
     private float specialEffectDuration;
 
@@ -28,15 +30,21 @@ public class Projectile : MonoBehaviour
 
     public void Death()
     {
+        if (earlyReturn)
+        {
+            currentCollider.enabled = false;
+            return;
+        }
         if (!canBeDestroyed) return;
-        if(!isMelee) currentCollider.enabled = false;
+        // if(!isMelee) currentCollider.enabled = false;
         body.linearVelocity = Vector3.zero;
         if (explosion != null)
         {
             GameObject instance = Instantiate(explosion, transform.position, Quaternion.identity);
+            instance.GetComponent<Projectile>().earlyReturn = true;
             Destroy(instance, 1f);
         }
-        Destroy(gameObject);
+        Destroy(gameObject, 0.1f);
     }
 
     public float GetDamage()
