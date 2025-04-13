@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: RiderElite
   specialEffectResistance: 0
   speed: 1
-  health: 40
+  health: 80
   coinReward: 10
   experience: 10
   damage: 7

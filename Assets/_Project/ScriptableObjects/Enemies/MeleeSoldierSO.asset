@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Soldier
   specialEffectResistance: 1
   speed: 0.75
-  health: 20
+  health: 40
   coinReward: 5
   experience: 5
   damage: 5

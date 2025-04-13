@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Tank
   specialEffectResistance: 1
   speed: 0.5
-  health: 35
+  health: 70
   coinReward: 5
   experience: 10
   damage: 6
