@@ -46,7 +46,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         CardSystemManager.Instance.CurrentCardDataSO = cardObject.CardDataHolderSO;
         InterfaceSystemManager.Instance.SetMouseReaction(MouseReaction.Hold);
         SoundSystemManager.Instance.UIClickCard();
-        playerVirtualHand.ShowTowerRange(cardObject.CardDataHolderSO.range);
+        playerVirtualHand.ShowTowerRange(cardObject.CardDataHolderSO.range, cardObject.CardDataHolderSO.cardType);
 
         rectTransform.position = Input.mousePosition;
     }

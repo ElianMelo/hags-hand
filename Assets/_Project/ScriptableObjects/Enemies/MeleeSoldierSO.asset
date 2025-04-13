@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Soldier
   specialEffectResistance: 1
-  speed: 1.5
+  speed: 0.75
   health: 20
   coinReward: 5
   experience: 5

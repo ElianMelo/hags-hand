@@ -23,6 +23,6 @@ MonoBehaviour:
     rarity: 3
   - borderSprite: {fileID: 21300000, guid: b8f292aa31fc8e549bfeb1500bb4b28d, type: 3}
     rarity: 4
-  borderOverlay: {fileID: 21300000, guid: 3f1ee636fa31f984ca6ff19e74ce81ca, type: 3}
+  borderOverlay: {fileID: 21300000, guid: 9b65696ada6b58345889324b64d9a868, type: 3}
   towerSpawnPrefab: {fileID: 3327043733019425350, guid: aa9e77b6d6363fc4b8b038b7eef756f5, type: 3}
   magicSpawnPrefab: {fileID: 3327043733019425350, guid: 5003d535419306c439c0790946726cc5, type: 3}

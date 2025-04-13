@@ -16,6 +16,7 @@ public class PlayerVirtualHand : MonoBehaviour
     public LayerMask enemiesMask;
     public Animator animator;
     public GameObject towerRange;
+    public SpriteRenderer towerRangeSpriteRenderer;
 
     private MouseReaction mouseReaction;
 
@@ -35,9 +36,10 @@ public class PlayerVirtualHand : MonoBehaviour
         return Enum.GetName(mouseReaction.GetType(), mouseReaction);
     }
 
-    public void ShowTowerRange(float range)
+    public void ShowTowerRange(float range, CardType cardType)
     {
         towerRange.transform.localScale = new Vector3(range, range, range);
+        towerRangeSpriteRenderer.color = cardType == CardType.Magic ? Color.blue : Color.red;
         towerRange.SetActive(true);
     }
 

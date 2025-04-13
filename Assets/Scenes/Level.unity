@@ -7861,6 +7861,7 @@ MonoBehaviour:
     m_Bits: 128
   animator: {fileID: 0}
   towerRange: {fileID: 1468871592}
+  towerRangeSpriteRenderer: {fileID: 1083599607}
 --- !u!54 &471844128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37654,7 +37655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -14.999512}
+  m_AnchoredPosition: {x: 0, y: -14.999634}
   m_SizeDelta: {x: 1146, y: 155}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2021348290

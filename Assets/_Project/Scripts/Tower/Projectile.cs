@@ -41,7 +41,8 @@ public class Projectile : MonoBehaviour
         if (explosion != null)
         {
             GameObject instance = Instantiate(explosion, transform.position, Quaternion.identity);
-            instance.GetComponent<Projectile>().earlyReturn = true;
+            Projectile projectile = instance.GetComponent<Projectile>();
+            if (projectile) projectile.earlyReturn = true;
             Destroy(instance, 1f);
         }
         Destroy(gameObject, 0.1f);
