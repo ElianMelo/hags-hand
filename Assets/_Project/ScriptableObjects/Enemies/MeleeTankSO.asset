@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Tank
   specialEffectResistance: 1
-  speed: 0.5
+  speed: 0.75
   health: 70
-  coinReward: 5
+  coinReward: 8
   experience: 10
   damage: 6
   enemyPrefab: {fileID: 3210896807166030665, guid: deafd31fc34c33a4a9965f7edd504d04, type: 3}

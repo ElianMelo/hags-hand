@@ -15,7 +15,7 @@ MonoBehaviour:
   waves:
   - waveDatas:
     - enemyData: {fileID: 11400000, guid: 9fa00ddee027f8842b1b4640401c7cb5, type: 2}
-      amount: 10
+      amount: 6
     spawnRate: 1
   - waveDatas:
     - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
@@ -70,7 +70,11 @@ MonoBehaviour:
   - waveDatas:
     - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
       amount: 100
-    spawnRate: 0.5
+    - enemyData: {fileID: 11400000, guid: a48ca8470a5a8b448968816f12c4de7c, type: 2}
+      amount: 20
+    - enemyData: {fileID: 11400000, guid: 848b839b9426b224788d4948bec24984, type: 2}
+      amount: 10
+    spawnRate: 0.3
   - waveDatas:
     - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}
       amount: 35
@@ -86,16 +90,12 @@ MonoBehaviour:
   - waveDatas:
     - enemyData: {fileID: 11400000, guid: 848b839b9426b224788d4948bec24984, type: 2}
       amount: 15
-    - enemyData: {fileID: 11400000, guid: a48ca8470a5a8b448968816f12c4de7c, type: 2}
-      amount: 15
     - enemyData: {fileID: 11400000, guid: 848b839b9426b224788d4948bec24984, type: 2}
       amount: 15
     - enemyData: {fileID: 11400000, guid: a48ca8470a5a8b448968816f12c4de7c, type: 2}
       amount: 15
     - enemyData: {fileID: 11400000, guid: 848b839b9426b224788d4948bec24984, type: 2}
       amount: 15
-    - enemyData: {fileID: 11400000, guid: f4448977809a6da44beb77813e25e697, type: 2}
-      amount: 10
     spawnRate: 0.5
   - waveDatas:
     - enemyData: {fileID: 11400000, guid: d7b6cc050c39a33419655cb692bd1a5c, type: 2}

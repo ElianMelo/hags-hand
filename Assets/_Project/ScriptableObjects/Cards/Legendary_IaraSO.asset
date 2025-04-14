@@ -18,8 +18,8 @@ MonoBehaviour:
   rarity: 4
   specialEffect: 1
   specialEffectMultiplier: 0
-  specialEffectDuration: 2
-  range: 13
+  specialEffectDuration: 3
+  range: 18
   attackSpeed: 0.3
   damage: 7
   durability: 20

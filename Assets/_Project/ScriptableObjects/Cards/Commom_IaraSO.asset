@@ -18,11 +18,11 @@ MonoBehaviour:
   rarity: 0
   specialEffect: 1
   specialEffectMultiplier: 0
-  specialEffectDuration: 1
-  range: 7
+  specialEffectDuration: 2
+  range: 13
   attackSpeed: 0.5
   damage: 3
-  durability: 10
+  durability: 7
   magicSpawnPrefab: 0
   addLeftForce: 0
   towerPrefab: {fileID: 3666480974190868447, guid: f50b073dcf091a14ea59a5b199b795f3, type: 3}
